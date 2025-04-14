@@ -1,2 +1,9 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+  import Main from '../components/Main.svelte';
+  import Header from '../components/Header.svelte';
+  import Footer from '../components/Footer.svelte';
+  import Step from '../components/Step.svelte';
+</script>
+
+<Main />
+

@@ -1,2 +1,26 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
+:root {
+  --font-body: 'Lato', sans-serif;
+  --font-heading: 'Manrope', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+h1 { font-weight: 800; } /* Extra Bold */
+h2 { font-weight: 700; } /* Bold */
+h3 { font-weight: 600; } /* Semi Bold */
+h4 { font-weight: 500; } /* Medium */
+h5 { font-weight: 400; } /* Regular */
+h6 { font-weight: 300; } /* Light */
