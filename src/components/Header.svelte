@@ -1,33 +1,85 @@
 <script>
+  import { browser } from '$app/environment';
+  import { page } from '$app/stores';
+  import UnderLineLink from './UnderLineLink.svelte';
+  
   let { y } = $props();
+  let isMenuOpen = $state(false);
+  let scrollProgress = $state(0);
+  
   let tabs = [
     {name: "Projects", link: "#projects"},
-    {name: "About Me", link: "#about"}
+    {name: "Experience", link: "#experience"},
+    {name: "About", link: "#about"}
   ];
+  
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+  }
+  
+  // Update scroll progress when y changes
+  $effect(() => {
+    if (browser) {
+      scrollProgress = Math.min((y / (document.body.scrollHeight - window.innerHeight)) * 100, 100);
+    }
+  });
 </script>
 
-<header class={"sticky z-[10] top-0 duration-200 px-6 flex items-center justify-between border border-solid " + (
-  y > 0 ? " py-4 bg-stone-200 border-neutral-800" : "py-6 bg-transparent border-transparent"
+<header class={"sticky z-[30] top-0 w-full duration-200 " + (
+  y > 0 ? " py-6 bg-stone-200/95 backdrop-blur-sm border-neutral-800" : "py-6 bg-transparent border-transparent"
 )}>
-  <h1 class="text-neutral-800 text-xl sm:text-2xl">
-    <span class="font-bold lato">Bryan Cheong</span>
-  </h1>
-  <div class="sm:flex items-center gap-4 hidden">
-    {#each tabs as tab, index}
-      <a href={tab.link} class="duration-200 hover:text-blue-900 text-neutral-800">
-        <p>{tab.name}</p>
-      </a>
-    {/each}
+  <div class="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-10 lg:px-4 flex items-center justify-between">
+    <!-- Logo with hover effect -->
+    <a href="/" class="relative h-[2.5rem] w-[20rem] overflow-hidden flex items-center group">
+      <div class="relative">
+        <h1 class="text-xl sm:text-2xl font-bold">
+          Bryan<span class="text-blue-900 ml-1 relative overflow-hidden inline-flex w-[10rem]">
+            <span class="transform transition-transform duration-500 group-hover:-translate-y-full whitespace-nowrap">Cheong</span>
+            <span class="absolute transform transition-transform duration-500 translate-y-full group-hover:translate-y-0 whitespace-nowrap">- Data Analyst</span>
+          </span>
+        </h1>
+      </div>
+    </a>
+
+    <div class="flex items-center gap-6">
+      <nav aria-label="Main navigation" class="sm:flex items-center gap-6 hidden">
+        {#each tabs as tab}
+          <UnderLineLink 
+            href={tab.link} 
+            text={tab.name} 
+            className={$page?.url?.pathname === tab.link ? 'text-blue-900' : ''}
+          />
+        {/each}
+      </nav>
+
+      <button onclick={toggleMenu} 
+              class="sm:hidden relative z-[35] w-7 h-7 focus:outline-none p-1 cursor-pointer flex items-center justify-center" 
+              aria-label="Menu">
+        <div class="relative w-5 h-4">
+          <!-- Hamburger Icon with thinner lines -->
+          <span class={`absolute h-0.5 w-5 bg-neutral-800 transform transition-all duration-300 ${isMenuOpen ? 'rotate-45 top-[7px]' : 'top-0'}`}></span>
+          <span class={`absolute h-0.5 w-5 bg-neutral-800 top-[7px] transform transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+          <span class={`absolute h-0.5 w-5 bg-neutral-800 transform transition-all duration-300 ${isMenuOpen ? '-rotate-45 top-[7px]' : 'top-[14px]'}`}></span>
+        </div>
+      </button>
+    </div>
   </div>
-  <a href="mailto:wei.cheong24@imperial.ac.uk" 
-     target="_blank"
-     class="relative overflow-hidden px-5 py-2 group rounded-full bg-blue-900
-     text-white"
-  >
-    <div
-      class="absolute top-0 right-full w-full h-full bg-slate-950 opacity-50
-      group-hover:translate-x-full z-0 duration-200"
-    ></div>
-    <h4 class="relative z-[1]">Get in Touch</h4>
-  </a>
+  
+  <div class="absolute bottom-0 left-0 h-[3px] bg-blue-900 transition-all duration-300" 
+       style={`width: ${scrollProgress}%`}></div>
 </header>
+
+
+<!-- Mobile navigation overlay -->
+<div class={"fixed inset-0 pt-16 bg-stone-200/95 z-[25] sm:hidden flex flex-col items-center justify-center gap-8 " + 
+  (isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none") + 
+  " transition-opacity duration-300"}>
+  {#each tabs as tab}
+    <UnderLineLink 
+      href={tab.link} 
+      text={tab.name} 
+      className="!text-2xl font-medium"
+      onclick={() => isMenuOpen = false}
+    />
+  {/each}
+</div>
