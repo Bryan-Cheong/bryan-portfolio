@@ -48,19 +48,19 @@
   });
 </script>
 
-<main class="flex flex-col flex-1 px-6 sm:px-8 md:px-10 lg:px-4" style="min-height: calc(100vh - {navbarHeight}px);">
-  <section id="introPage" class="w-full max-w-3xl mx-auto flex flex-col justify-center" style="min-height: calc(100vh - {navbarHeight}px - 3rem);">
-    <!-- Text content (left-aligned) -->
-    <div class="flex flex-col gap-6 md:gap-8 lg:gap-10 pb-32">
-      <h2 class="text-3xl sm:text-4xl md:text-5xl text-left">
+<main class="flex flex-col flex-1" style="min-height: calc(100vh - {navbarHeight}px);">
+  <section id="introPage" class="w-full max-w-3xl mx-auto flex flex-col justify-center px-[clamp(1rem,5vw,2.5rem)]" style="min-height: calc(100vh - {navbarHeight}px - 3rem);">
+    <!-- Text content with fluid typography -->
+    <div class="flex flex-col gap-[clamp(1.5rem,4vw,2.5rem)] pb-[clamp(4rem,10vh,8rem)]">
+      <h2 class="text-[clamp(1.75rem,5vw,3.5rem)] text-left">
         Analytical. Adaptable. <br />
         Always Learning.
       </h2>
-      <p class="text-lg sm:text-xl md:text-2xl max-w-3xl text-left">
+      <p class="text-[clamp(1rem,2vw,1.25rem)] max-w-3xl text-left">
         I turn data into stories, models into strategy, and insight into action.
       </p>
       <!-- Call-to-Action Buttons -->
-      <div class="flex flex-wrap gap-4 justify-start mt-2">
+      <div class="flex flex-wrap gap-[clamp(0.75rem,2vw,1rem)] justify-start mt-[clamp(0.5rem,1vw,0.75rem)]">
         <Button 
           href="mailto:wei.cheong24@imperial.ac.uk"
           variant="primary"

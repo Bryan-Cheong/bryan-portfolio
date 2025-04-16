@@ -8,8 +8,8 @@
   let scrollProgress = $state(0);
   
   let tabs = [
-    {name: "Projects", link: "#projects"},
     {name: "Experience", link: "#experience"},
+    {name: "Projects", link: "#projects"},
     {name: "About", link: "#about"}
   ];
   
@@ -25,17 +25,17 @@
   });
 </script>
 
-<header class={"sticky z-[30] top-0 w-full duration-200 " + (
-  y > 0 ? " py-6 bg-stone-200/95 backdrop-blur-sm border-neutral-800" : "py-6 bg-transparent border-transparent"
+<header class={"sticky z-[30] top-0 w-full transition-all duration-300 " + (
+  y > 0 ? " py-[clamp(1rem,1vw,1.5rem)] bg-stone-200/95 backdrop-blur-sm border-neutral-800" : "py-[clamp(1rem,1vw,1.5rem)] bg-transparent border-transparent"
 )}>
-  <div class="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-10 lg:px-4 flex items-center justify-between">
+  <div class="max-w-[1400px] mx-auto px-[clamp(1rem,5vw,2.5rem)] flex items-center justify-between">
     <!-- Logo with hover effect -->
-    <a href="/" class="relative h-[2.5rem] w-[20rem] overflow-hidden flex items-center group">
+    <a href="/" class="relative h-auto overflow-hidden flex items-center group">
       <div class="relative">
-        <h1 class="text-xl sm:text-2xl font-bold">
-          Bryan<span class="text-blue-900 ml-1 relative overflow-hidden inline-flex w-[10rem]">
+        <h1 class="text-[clamp(1.1rem,3vw,1.5rem)]">
+          Bryan<span class="text-blue-900 ml-1 relative overflow-hidden inline-flex w-[clamp(8rem,24vw,11rem)]">
             <span class="transform transition-transform duration-500 group-hover:-translate-y-full whitespace-nowrap">Cheong</span>
-            <span class="absolute transform transition-transform duration-500 translate-y-full group-hover:translate-y-0 whitespace-nowrap">- Data Analyst</span>
+            <span class="absolute transform transition-transform duration-500 translate-y-full group-hover:translate-y-0 whitespace-nowrap">&mdash;&thinsp;Data Analyst</span>
           </span>
         </h1>
       </div>
