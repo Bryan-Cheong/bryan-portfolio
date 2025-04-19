@@ -1,7 +1,12 @@
 <script>
   import Button from './Button.svelte';
   import StickyTitleSection from './StickyTitleSection.svelte';
+  import TitleSection from './TitleSection.svelte';
   import ExperienceList from './ExperienceList.svelte';
+  import EducationList from './EducationList.svelte';
+  import ProjectList from './ProjectList.svelte';
+  import About from './About.svelte';
+  import Interests from './Interests.svelte';
   import { browser } from '$app/environment';
   import { onMount } from 'svelte';
   
@@ -15,7 +20,7 @@
     },
     {
       logo: '/assets/gse.png',
-      company: 'General System Engineering',
+      company: 'GSE-M Technology Sdn. Bhd',
       title: 'Enterprise Resource Planning Assistant',
       dates: 'July 2023 → Today',
       website: 'https://www.gse.com.my/'
@@ -36,14 +41,62 @@
     }
   ];
 
+  const educationItems = [
+    {
+      institution: 'Imperial College London',
+      degree: 'MSc in Business Analytics',
+      dates: '2024 → 2025',
+      website: 'https://www.imperial.ac.uk/'
+    },
+    {
+      institution: 'University College London',
+      degree: 'BSc in Computer Science',
+      dates: '2021 → 2024',
+      website: 'https://www.ucl.ac.uk/'
+    }
+  ];
+
+  const projectItems = [
+    {
+      title: "Data Visualization Dashboard",
+      description: "Created an interactive dashboard for visualizing complex financial data, enabling stakeholders to make data-driven decisions quickly and efficiently.",
+      tools: ["Python", "Plotly", "Pandas", "Flask"],
+      image: "/assets/projects/dashboard.jpg",
+      link: "#"
+    },
+    {
+      title: "Machine Learning Stock Predictor",
+      description: "Developed a predictive model using historical stock data and machine learning algorithms to forecast market trends with 78% accuracy.",
+      tools: ["Python", "TensorFlow", "scikit-learn", "NumPy"],
+      image: "/assets/projects/stocks.jpg",
+      link: "#"
+    },
+    {
+      title: "Customer Segmentation Analysis",
+      description: "Applied clustering algorithms to identify distinct customer segments, helping a retail client optimize their marketing strategy and increase ROI by 23%.",
+      tools: ["R", "ggplot2", "SQL", "Power BI"],
+      image: "/assets/projects/segmentation.jpg",
+      link: "#"
+    },
+    {
+      title: "Natural Language Processing Tool",
+      description: "Built a sentiment analysis tool that processes customer feedback and extracts actionable insights, improving response times by 45%.",
+      tools: ["Python", "NLTK", "spaCy", "Streamlit"],
+      image: "/assets/projects/nlp.jpg",
+      link: "#"
+    }
+  ];
+
   // Calculate navbar height and adjust positioning
-  let navbarHeight = 0;
+  let navbarHeight = $state(70);
   
   onMount(() => {
     if (browser) {
       // Get the header element height
       const header = document.querySelector('header');
-      navbarHeight = header ? header.offsetHeight : 0;
+      if (header) {
+        navbarHeight = header.offsetHeight;
+      }
     }
   });
 </script>
@@ -81,95 +134,24 @@
     </div>
   </section>
   
-  <StickyTitleSection title="Experience">
+  <StickyTitleSection title="Experience" id="experience">
     <ExperienceList items={experienceItems} />
   </StickyTitleSection>
+
+
+  <TitleSection title="Projects" id="projects">
+    <ProjectList items={projectItems} />
+  </TitleSection>
   
+  <StickyTitleSection title="Education" id="education">
+    <EducationList items={educationItems} />
+  </StickyTitleSection>
 
-  <!-- Projects Section using StickyTitleSection -->
-  <StickyTitleSection title="Projects">
-    <!-- Project 1 -->
-    <div class="bg-white rounded-lg shadow-md p-6">
-      <h3 class="text-xl font-medium mb-2">Project Title 1</h3>
-      <p class="text-neutral-600 mb-4">
-        Brief description of the project, technologies used, and outcomes achieved.
-      </p>
-      <div class="flex gap-2 flex-wrap mb-4">
-        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Python</span>
-        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Data Analysis</span>
-        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Visualization</span>
-      </div>
-      <a href="#" class="text-blue-900 hover:underline">View Project →</a>
-    </div>
-    
-    <!-- Project 2 -->
-    <div class="bg-white rounded-lg shadow-md p-6">
-      <h3 class="text-xl font-medium mb-2">Project Title 2</h3>
-      <p class="text-neutral-600 mb-4">
-        Brief description of the project, technologies used, and outcomes achieved.
-      </p>
-      <div class="flex gap-2 flex-wrap mb-4">
-        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">SQL</span>
-        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Power BI</span>
-        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Data Modeling</span>
-      </div>
-      <a href="#" class="text-blue-900 hover:underline">View Project →</a>
-    </div>
+  <StickyTitleSection title="About Me" id="about">
+    <About />
+  </StickyTitleSection>
 
-    <!-- Project 3 -->
-    <div class="bg-white rounded-lg shadow-md p-6">
-      <h3 class="text-xl font-medium mb-2">Project Title 2</h3>
-      <p class="text-neutral-600 mb-4">
-        Brief description of the project, technologies used, and outcomes achieved.
-      </p>
-      <div class="flex gap-2 flex-wrap mb-4">
-        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">SQL</span>
-        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Power BI</span>
-        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Data Modeling</span>
-      </div>
-      <a href="#" class="text-blue-900 hover:underline">View Project →</a>
-    </div>
-
-    <!-- Project 4 -->
-    <div class="bg-white rounded-lg shadow-md p-6">
-      <h3 class="text-xl font-medium mb-2">Project Title 2</h3>
-      <p class="text-neutral-600 mb-4">
-        Brief description of the project, technologies used, and outcomes achieved.
-      </p>
-      <div class="flex gap-2 flex-wrap mb-4">
-        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">SQL</span>
-        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Power BI</span>
-        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Data Modeling</span>
-      </div>
-      <a href="#" class="text-blue-900 hover:underline">View Project →</a>
-    </div>
-
-    <!-- Project 5 -->
-    <div class="bg-white rounded-lg shadow-md p-6">
-      <h3 class="text-xl font-medium mb-2">Project Title 2</h3>
-      <p class="text-neutral-600 mb-4">
-        Brief description of the project, technologies used, and outcomes achieved.
-      </p>
-      <div class="flex gap-2 flex-wrap mb-4">
-        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">SQL</span>
-        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Power BI</span>
-        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Data Modeling</span>
-      </div>
-      <a href="#" class="text-blue-900 hover:underline">View Project →</a>
-    </div>
-
-    <!-- Project 6 -->
-    <div class="bg-white rounded-lg shadow-md p-6">
-      <h3 class="text-xl font-medium mb-2">Project Title 2</h3>
-      <p class="text-neutral-600 mb-4">
-        Brief description of the project, technologies used, and outcomes achieved.
-      </p>
-      <div class="flex gap-2 flex-wrap mb-4">
-        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">SQL</span>
-        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Power BI</span>
-        <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm">Data Modeling</span>
-      </div>
-      <a href="#" class="text-blue-900 hover:underline">View Project →</a>
-    </div>
+  <StickyTitleSection title="Interests" id="interests">
+    <Interests />
   </StickyTitleSection>
 </main>

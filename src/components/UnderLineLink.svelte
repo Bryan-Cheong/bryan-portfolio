@@ -26,8 +26,12 @@
     transform: scaleX(1);
     transform-origin: left;
   }
-</style>
 
+  .nav-active {
+    color: #1e3a8a !important; /* blue-900 */
+    font-weight: 600;
+  }
+</style>
 <a
   {href}
   {target}

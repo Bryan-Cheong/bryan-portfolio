@@ -6,11 +6,14 @@
   let { y } = $props();
   let isMenuOpen = $state(false);
   let scrollProgress = $state(0);
+  let activeSection = $state('');
   
   let tabs = [
-    {name: "Experience", link: "#experience"},
-    {name: "Projects", link: "#projects"},
-    {name: "About", link: "#about"}
+    {name: "Experience", link: "#experience", id: "experience"},
+    {name: "Projects", link: "#projects", id: "projects"},
+    {name: "Education", link: "#education", id: "education"},
+    {name: "About", link: "#about", id: "about"},
+    {name: "Interests", link: "#interests", id: "interests"}
   ];
   
   function toggleMenu() {
@@ -21,6 +24,26 @@
   $effect(() => {
     if (browser) {
       scrollProgress = Math.min((y / (document.body.scrollHeight - window.innerHeight)) * 100, 100);
+
+      // Check which section is in view
+      const sections = tabs.map(tab => document.getElementById(tab.id));
+      
+      for (let i = 0; i < sections.length; i++) {
+        const section = sections[i];
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          // If the section is in the viewport
+          if (rect.top <= 150 && rect.bottom >= 150) {
+            activeSection = tabs[i].id;
+            break;
+          }
+        }
+      }
+      
+      // Default to first section if we're at the top
+      if (y < 100) {
+        activeSection = '';
+      }
     }
   });
 </script>
@@ -47,7 +70,7 @@
           <UnderLineLink 
             href={tab.link} 
             text={tab.name} 
-            className={$page?.url?.pathname === tab.link ? 'text-blue-900' : ''}
+            className={activeSection === tab.id ? 'text-blue-900 nav-active' : ''}
           />
         {/each}
       </nav>
@@ -78,7 +101,7 @@
     <UnderLineLink 
       href={tab.link} 
       text={tab.name} 
-      className="!text-2xl font-medium"
+      className={`!text-2xl font-medium ${activeSection === tab.id ? 'text-blue-900 nav-active' : ''}`}
       onclick={() => isMenuOpen = false}
     />
   {/each}

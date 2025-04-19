@@ -4,9 +4,16 @@
     type = "button", 
     variant = "primary", // primary or secondary
     target = undefined,
+    rel = undefined,
     icon = undefined,  // Font Awesome icon class
     fullWidth = false
   } = $props();
+
+  $effect(() => {
+    if (target === "_blank" && !rel) {
+      rel = "noopener noreferrer";
+    }
+  });
 
   const variantStyles = {
     primary: {
@@ -51,6 +58,7 @@
   <a 
     {href}
     {target}
+    {rel}
     class={buttonClasses}
   >
     <div class={`btn-bg-animate ${variantStyles[variant].bg}`}></div>

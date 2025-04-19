@@ -4,10 +4,12 @@
 :root {
   --font-body: 'Lato', sans-serif;
   --font-heading: 'Lato', sans-serif;
+  --header-height: 70px;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 30px);
 }
 
 body {
