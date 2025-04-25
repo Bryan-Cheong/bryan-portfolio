@@ -65,7 +65,7 @@
     </a>
 
     <div class="flex items-center gap-6">
-      <nav aria-label="Main navigation" class="sm:flex items-center gap-6 hidden">
+      <nav aria-label="Main navigation" class="md:flex items-center gap-6 hidden">
         {#each tabs as tab}
           <UnderLineLink 
             href={tab.link} 
@@ -76,7 +76,7 @@
       </nav>
 
       <button onclick={toggleMenu} 
-              class="sm:hidden relative z-[35] w-7 h-7 focus:outline-none p-1 cursor-pointer flex items-center justify-center" 
+              class="md:hidden relative z-[35] w-7 h-7 focus:outline-none p-1 cursor-pointer flex items-center justify-center" 
               aria-label="Menu">
         <div class="relative w-5 h-4">
           <!-- Hamburger Icon with thinner lines -->
@@ -94,7 +94,7 @@
 
 
 <!-- Mobile navigation overlay -->
-<div class={"fixed inset-0 pt-16 bg-stone-200/95 z-[25] sm:hidden flex flex-col items-center justify-center gap-8 " + 
+<div class={"fixed inset-0 pt-16 bg-stone-200/95 z-[25] md:hidden flex flex-col items-center justify-center gap-8 " + 
   (isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none") + 
   " transition-opacity duration-300"}>
   {#each tabs as tab}

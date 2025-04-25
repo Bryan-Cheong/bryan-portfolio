@@ -37,7 +37,7 @@
   {target}
   {rel}
   {onclick}
-  class={`relative group nav-link duration-200 hover:text-blue-900 text-neutral-800 font-medium text-base sm:text-lg transition-transform duration-300 hover:-translate-y-1 ${className}`}
+  class={`relative group nav-link duration-200 hover:text-blue-900 text-neutral-800 font-medium text-sm sm:text-base transition-transform duration-300 hover:-translate-y-1 ${className}`}
 >
   <span>{text}</span>
   <span class="nav-link-underline"></span>

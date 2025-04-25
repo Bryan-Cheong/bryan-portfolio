@@ -16,28 +16,41 @@
       company: 'Anavio Capital Partners',
       title: 'Quantitative Analytics Platform Intern',
       dates: 'August 2021 → Today',
-      website: 'https://www.anaviocap.com/'
+      responsibilities: [
+        "Long Short Equity Portfolio Automation",
+      ]
     },
     {
       logo: '/assets/gse.png',
       company: 'GSE-M Technology Sdn. Bhd',
       title: 'Enterprise Resource Planning Assistant',
       dates: 'July 2023 → Today',
-      website: 'https://www.gse.com.my/'
+      responsibilities: [
+        "Implemented ERP system",
+        "Trained staff on system usage"
+      ]
     },
     {
       logo: 'assets/britishredcross.png',
       company: 'British Red Cross',
       title: 'Data Analyst',
       dates: 'October 2020 → July 2021',
-      website: 'https://www.redcross.org.uk/'
+      responsibilities: [
+        "Analysed complaints data to identify trends and areas for improvement",
+        "Developed dashboards to visualize data insights for stakeholders"
+      ]
     },
     {
       logo: 'assets/subplace.png',
       company: 'Subplace',
       title: 'Software Reliability Intern',
       dates: 'March 2021 → Today',
-      website: 'https://subplace.com/'
+      responsibilities: [
+        "Implemented monitoring tools to track system performance and reliability",
+        "Conducted root cause analysis for system outages and performance issues",
+        "Advocated for best practices in software development and testing like agile methodologies and test-driven development",
+        "Created documentation for incident response procedures"
+      ]
     }
   ];
 
@@ -58,36 +71,86 @@
 
   const projectItems = [
     {
-      title: "Data Visualization Dashboard",
-      description: "Created an interactive dashboard for visualizing complex financial data, enabling stakeholders to make data-driven decisions quickly and efficiently.",
+      title: "Beat the Bookies",
+      description: "Premier League betting prediction model using machine learning.",
       tools: ["Python", "Plotly", "Pandas", "Flask"],
-      image: "/assets/projects/dashboard.jpg",
+      image: "/assets/projects/bookies.png",
+      pdf: "/assets/projects/bookies.pdf",
+      link: "#"
+
+    },
+    {
+      title: "RIE Final Year Project",
+      description: "RIE Noise Reduction Algorithm for Lagged Covariance Matrices",
+      tools: ["Python", "NumPy", "SciPy", "Matplotlib"],
+      image: "/assets/projects/rie.png",
+      pdf: "assets/projects/rie.pdf",
+      link: "#",
+      github: "https://github.com/Bryan-Cheong/RIE-Singular-Value-Cleaning-of-Lagged-Covariance-Matrices"
+    },
+    {
+      title: "Text Analytics Project on Song Lyrics",
+      description: "Analysed song lyrics to identify patterns in popular music across different genres and decades.",
+      tools: ["R", "sentimentr", "ggplot2", "dplyr", "quanteda"],
+      image: "/assets/projects/song.png",
+      pdf: "/assets/projects/song.pdf",
       link: "#"
     },
     {
-      title: "Machine Learning Stock Predictor",
-      description: "Developed a predictive model using historical stock data and machine learning algorithms to forecast market trends with 78% accuracy.",
-      tools: ["Python", "TensorFlow", "scikit-learn", "NumPy"],
-      image: "/assets/projects/stocks.jpg",
+      title: "Logistics and Supply Chain Optimisation Game",
+      description: "Optimised logistics and supply chain operations using simulation and optimization techniques.",
+      tools: ["Python", "R"],
+      image: "/assets/projects/logistics.png",
+      pdf: "/assets/projects/logistics.pdf",
       link: "#"
     },
     {
-      title: "Customer Segmentation Analysis",
-      description: "Applied clustering algorithms to identify distinct customer segments, helping a retail client optimize their marketing strategy and increase ROI by 23%.",
+      title: "Titanic Exploratory Data Analysis",
+      description: "Conducted exploratory data analysis on Titanic dataset, visualizing survival rates and passenger demographics.",
+      tools: ["R", "ggplot2", "dplyr", "tidyverse"],
+      image: "/assets/projects/titanic.png",
+      pdf: "/assets/projects/titanic.pdf",
+      link: "#"
+    },
+    {
+      title: "Energy Forecasting Model",
+      description: "Developed a forecasting model for energy consumption using time series analysis.",
+      tools: ["Python", "Pandas", "NumPy", "Statsmodels", "XGBoost"],
+      image: "/assets/projects/energy_forecasting.png",
+      pdf: "/assets/projects/energy_forecasting.pdf",
+      link: "#"
+    },
+    {
+      title: "Energy Risk, Hedging, and Real Options Valuation",
+      description: "Developed a model to assess energy risk and evaluate hedging strategies using real options valuation.",
+      tools: ["Python", "NumPy", "SciPy", "Matplotlib"],
+      image: "/assets/projects/scraping.png",
+      pdf: "/assets/projects/scraping.pdf",
+      link: "#"
+    },
+    {
+      title: "A/B Testing Analysis",
+      description: "Conducted A/B testing for a marketing campaign, resulting in a 15% increase in conversion rates.",
+      tools: ["Python", "R", "SQL"],
+      image: "/assets/projects/abtesting.png",
+      link: "#"
+    },
+    {
+      title: "Tetris AI",
+      description: "Implemented a Tetris heuristics evaluation AI, scored 28,000+ points using 400 blocks, 80th percentile in UCL's cohort",
+      tools: ["Python", "NumPy", "Pygame"],
+      image: "/assets/projects/tetris.png",
+      link: "#"
+    },
+    {
+      title: "Public Perception of Benefit Fraud",
+      description: "Analysed eight variables in the 2019 British Social Survey on benefit fraud with two-sided t-tests, linear regression and more using R. Found public estimates (34.6%) far exceeded the government's (1.1%), with discrepancies influenced by political affiliation and education level. Highlighted the need for targeted education to address public misconceptions",
       tools: ["R", "ggplot2", "SQL", "Power BI"],
-      image: "/assets/projects/segmentation.jpg",
-      link: "#"
-    },
-    {
-      title: "Natural Language Processing Tool",
-      description: "Built a sentiment analysis tool that processes customer feedback and extracts actionable insights, improving response times by 45%.",
-      tools: ["Python", "NLTK", "spaCy", "Streamlit"],
-      image: "/assets/projects/nlp.jpg",
+      image: "/assets/projects/segmentation.png",
       link: "#"
     }
   ];
 
-  // Calculate navbar height and adjust positioning
   let navbarHeight = $state(70);
   
   onMount(() => {
