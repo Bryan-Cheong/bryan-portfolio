@@ -52,8 +52,8 @@
     <div class="flex flex-col sm:flex-row justify-between border-t border-neutral-300 mt-10 pt-6 text-sm text-neutral-500">
       <p>© {new Date().getFullYear()} Bryan Cheong. All rights reserved.</p>
       <div class="flex gap-4 mt-2 sm:mt-0">
-        <a href="#" class="hover:text-blue-900">Privacy Policy</a>
-        <a href="#" class="hover:text-blue-900">Terms of Use</a>
+        <a href="/assets/privacy.pdf" class="hover:text-blue-900">Privacy Policy</a>
+        <a href="/assets/terms.pdf" class="hover:text-blue-900">Terms of Use</a>
       </div>
     </div>
   </div>
