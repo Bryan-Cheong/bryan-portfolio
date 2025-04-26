@@ -15,28 +15,48 @@
     {name: "Experience", link: "#experience", id: "experience"},
     {name: "Projects", link: "#projects", id: "projects"},
     {name: "Education", link: "#education", id: "education"},
-    {name: "About", link: "#about", id: "about"},
-    {name: "Interests", link: "#interests", id: "interests"}
+    {name: "About", link: "#about", id: "about"}
   ];
   
   function toggleMenu() {
     isMenuOpen = !isMenuOpen;
   }
-  
+
+  let animateHeaderTimeout;
+  let animateNavTimeout;
+
+  // Use a different approach for animation timing
   onMount(() => {
     if (browser) {
-      // Listen for the event from Main.svelte
-      window.addEventListener('startHeaderAnimation', () => {
-        setTimeout(() => {
+      console.log("Header component mounted");
+      
+      // Force animation with a different approach that should work reliably
+      requestAnimationFrame(() => {
+        animateHeaderTimeout = setTimeout(() => {
+          console.log("Starting header animation");
+          
+          // IMPORTANT: Force a reflow before changing classes
+          document.body.offsetHeight; 
+          
+          // Set a custom attribute for animation to avoid CSS conflicts
+          document.querySelector('header').setAttribute('data-loaded', 'true');
+          
           isPageLoaded = true;
-        }, 500);
-        
-        // Start nav items animation shortly after
-        setTimeout(() => {
-          navItemsLoaded = true;
-        }, 500);
+          
+          // Start nav items animation shortly after
+          animateNavTimeout = setTimeout(() => {
+            console.log("Starting nav items animation");
+            navItemsLoaded = true;
+          }, 100);
+        }, 600);
       });
     }
+    
+    return () => {
+      // Clean up timeouts to prevent memory leaks
+      if (animateHeaderTimeout) clearTimeout(animateHeaderTimeout);
+      if (animateNavTimeout) clearTimeout(animateNavTimeout);
+    };
   });
   
   // Update scroll progress when y changes
@@ -67,14 +87,20 @@
   });
 </script>
 
-<style>
+<style> 
+  header[data-loaded="true"] {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
   .header-entrance {
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.4s ease-out, transform 0.4s ease-out;
   }
   
-  .header-entrance.loaded {
+  /* Add more specific selector to ensure it overrides */
+  header.header-entrance.loaded {
     opacity: 1;
     transform: translateY(0);
   }
@@ -117,11 +143,14 @@
   }
 </style>
 
-<header class={"sticky z-[30] top-0 w-full transition-all duration-300 header-entrance " + (
-  isPageLoaded ? "loaded " : ""
-) + (
-  y > 0 ? " py-[clamp(1rem,1vw,1.5rem)] bg-stone-200/95 backdrop-blur-sm border-neutral-800" : "py-[clamp(1rem,1vw,1.5rem)] bg-transparent border-transparent"
-)}>
+<header 
+  class={"sticky z-[30] top-0 w-full transition-all duration-300 header-entrance " + (
+    isPageLoaded ? "loaded " : ""
+  ) + (
+    y > 0 ? " py-[clamp(1rem,1vw,1.5rem)] bg-stone-200/95 backdrop-blur-sm border-neutral-800" : "py-[clamp(1rem,1vw,1.5rem)] bg-transparent border-transparent"
+  )}
+  data-loaded={isPageLoaded ? "true" : "false"}
+>
   <div class="max-w-[1400px] mx-auto px-[clamp(1rem,5vw,2.5rem)] flex items-center justify-between">
     <!-- Logo with hover effect -->
     <a href="/" class="relative h-auto overflow-hidden flex items-center group">

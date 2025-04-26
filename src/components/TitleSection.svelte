@@ -1,8 +1,9 @@
 <script>
   import { browser } from '$app/environment';
   import { onMount } from 'svelte';
+	import { render } from 'svelte/server';
   
-  let { title = "Section", id = undefined } = $props();
+  let { title = "Section", id = undefined, children } = $props();
   let isVisible = $state(false);
   let sectionRef;
   
@@ -57,7 +58,7 @@
       <h2 class="text-[clamp(1.5rem,4vw,2.25rem)] mb-12">{title}</h2>
     </div>
     <div class={`flex flex-col gap-12 section-entrance content-entrance ${isVisible ? 'visible' : ''}`}>
-      <slot />
+      {@render children()}
     </div>
   </div>
 </section>
