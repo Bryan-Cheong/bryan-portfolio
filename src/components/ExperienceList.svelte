@@ -24,7 +24,7 @@
         aria-expanded={expandedItems.includes(index)}
         aria-controls={`content-${index}`}
       >
-        <!-- Logo/Icon - Responsive sizing -->
+        <!-- Logo/Icon -->
         <div class="flex-shrink-0">
           <img 
             src={item.logo} 
@@ -33,7 +33,7 @@
           />
         </div>
 
-        <!-- Text Info - Responsive font sizes -->
+        <!-- Text Info -->
         <div class="flex flex-col justify-center flex-grow">
           <div class="font-semibold text-neutral-900 text-[clamp(1.125rem,2vw,1.25rem)] group-hover:text-blue-900 transition-colors duration-300 flex items-center">
             {item.company}
@@ -55,11 +55,9 @@
         >
           <!-- Aligned content -->
           <div class="flex">
-            <!-- Spacer matching the width of the logo -->
             <div class="flex-shrink-0 w-24"></div>
-            <!-- Gap matching the header gap -->
             <div class="w-[clamp(1rem,3vw,1.5rem)]"></div>
-            <!-- Content area -->
+            <!-- Content -->
             <div class="flex-grow">
               <ul class="list-disc pl-5 text-neutral-700 space-y-2">
                 {#if item.responsibilities}

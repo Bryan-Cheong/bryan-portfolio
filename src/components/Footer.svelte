@@ -43,6 +43,7 @@
           <li><a href="#projects" class="hover:text-blue-900 hover:underline">Projects</a></li>
           <li><a href="#education" class="hover:text-blue-900 hover:underline">Education</a></li>
           <li><a href="#about" class="hover:text-blue-900 hover:underline">About</a></li>
+          <li><a href="#interests" class="hover:text-blue-900 hover:underline">Interests</a></li>
         </ul>
       </div>
     </div>

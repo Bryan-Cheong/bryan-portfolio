@@ -2,11 +2,14 @@
   import { browser } from '$app/environment';
   import { page } from '$app/stores';
   import UnderLineLink from './UnderLineLink.svelte';
+  import { onMount } from 'svelte';
   
   let { y } = $props();
   let isMenuOpen = $state(false);
   let scrollProgress = $state(0);
   let activeSection = $state('');
+  let isPageLoaded = $state(false);
+  let navItemsLoaded = $state(false);
   
   let tabs = [
     {name: "Experience", link: "#experience", id: "experience"},
@@ -19,6 +22,22 @@
   function toggleMenu() {
     isMenuOpen = !isMenuOpen;
   }
+  
+  onMount(() => {
+    if (browser) {
+      // Listen for the event from Main.svelte
+      window.addEventListener('startHeaderAnimation', () => {
+        setTimeout(() => {
+          isPageLoaded = true;
+        }, 500);
+        
+        // Start nav items animation shortly after
+        setTimeout(() => {
+          navItemsLoaded = true;
+        }, 500);
+      });
+    }
+  });
   
   // Update scroll progress when y changes
   $effect(() => {
@@ -48,7 +67,59 @@
   });
 </script>
 
-<header class={"sticky z-[30] top-0 w-full transition-all duration-300 " + (
+<style>
+  .header-entrance {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  }
+  
+  .header-entrance.loaded {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .nav-item {
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  }
+  
+  .nav-item.loaded {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .nav-item-1 { transition-delay: 0.05s; }
+  .nav-item-2 { transition-delay: 0.1s; }
+  .nav-item-3 { transition-delay: 0.15s; }
+  .nav-item-4 { transition-delay: 0.2s; }
+  .nav-item-5 { transition-delay: 0.25s; }
+  
+  /* Mobile menu item animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in-down-0,
+  .animate-fade-in-down-1,
+  .animate-fade-in-down-2,
+  .animate-fade-in-down-3,
+  .animate-fade-in-down-4 {
+    animation: fadeInDown 0.4s ease-out forwards;
+  }
+</style>
+
+<header class={"sticky z-[30] top-0 w-full transition-all duration-300 header-entrance " + (
+  isPageLoaded ? "loaded " : ""
+) + (
   y > 0 ? " py-[clamp(1rem,1vw,1.5rem)] bg-stone-200/95 backdrop-blur-sm border-neutral-800" : "py-[clamp(1rem,1vw,1.5rem)] bg-transparent border-transparent"
 )}>
   <div class="max-w-[1400px] mx-auto px-[clamp(1rem,5vw,2.5rem)] flex items-center justify-between">
@@ -66,12 +137,14 @@
 
     <div class="flex items-center gap-6">
       <nav aria-label="Main navigation" class="md:flex items-center gap-6 hidden">
-        {#each tabs as tab}
-          <UnderLineLink 
-            href={tab.link} 
-            text={tab.name} 
-            className={activeSection === tab.id ? 'text-blue-900 nav-active' : ''}
-          />
+        {#each tabs as tab, i}
+          <div class={`nav-item nav-item-${i+1} ${navItemsLoaded ? 'loaded' : ''}`}>
+            <UnderLineLink 
+              href={tab.link} 
+              text={tab.name} 
+              className={activeSection === tab.id ? 'text-blue-900 nav-active' : ''}
+            />
+          </div>
         {/each}
       </nav>
 
@@ -79,7 +152,7 @@
               class="md:hidden relative z-[35] w-7 h-7 focus:outline-none p-1 cursor-pointer flex items-center justify-center" 
               aria-label="Menu">
         <div class="relative w-5 h-4">
-          <!-- Hamburger Icon with thinner lines -->
+          <!-- Hamburger Icon -->
           <span class={`absolute h-0.5 w-5 bg-neutral-800 transform transition-all duration-300 ${isMenuOpen ? 'rotate-45 top-[7px]' : 'top-0'}`}></span>
           <span class={`absolute h-0.5 w-5 bg-neutral-800 top-[7px] transform transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
           <span class={`absolute h-0.5 w-5 bg-neutral-800 transform transition-all duration-300 ${isMenuOpen ? '-rotate-45 top-[7px]' : 'top-[14px]'}`}></span>
@@ -92,8 +165,6 @@
        style={`width: ${scrollProgress}%`}></div>
 </header>
 
-
-<!-- Mobile navigation overlay -->
 <div class={"fixed inset-0 pt-16 bg-stone-200/95 z-[25] md:hidden flex flex-col items-center justify-center gap-8 " + 
   (isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none") + 
   " transition-opacity duration-300"}>

@@ -6,7 +6,8 @@
     target = undefined,
     rel = undefined,
     icon = undefined,  // Font Awesome icon class
-    fullWidth = false
+    fullWidth = false,
+    children
   } = $props();
 
   $effect(() => {
@@ -66,7 +67,7 @@
       {#if icon}
         <i class={icon}></i>
       {/if}
-      <span><slot /></span>
+      <span>{@render children()}</span>
     </div>
   </a>
 {:else}
@@ -79,7 +80,7 @@
       {#if icon}
         <i class={icon}></i>
       {/if}
-      <span><slot /></span>
+      <span>{@render children()}</span>
     </div>
   </button>
 {/if}
