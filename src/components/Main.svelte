@@ -72,6 +72,22 @@
 
   const projectItems = [
     {
+      title: "Text Analytics Project on Song Lyrics",
+      description: "Analysed song lyrics to identify patterns in popular music across different genres and decades.",
+      tools: ["R", "sentimentr", "ggplot2", "dplyr", "quanteda"],
+      image: "/assets/projects/song.png",
+      pdf: "/assets/projects/song.pdf",
+      link: "#"
+    },
+    {
+      title: "Logistics and Supply Chain Optimisation Game",
+      description: "Optimised logistics and supply chain operations using simulation and optimization techniques.",
+      tools: ["Python", "R"],
+      image: "/assets/projects/logistics.png",
+      pdf: "/assets/projects/logistics.pdf",
+      link: "#"
+    },
+    {
       title: "Beat the Bookies",
       description: "Premier League betting prediction model using machine learning.",
       tools: ["Python", "Plotly", "Pandas", "Flask"],
@@ -90,30 +106,6 @@
       github: "https://github.com/Bryan-Cheong/RIE-Singular-Value-Cleaning-of-Lagged-Covariance-Matrices"
     },
     {
-      title: "Text Analytics Project on Song Lyrics",
-      description: "Analysed song lyrics to identify patterns in popular music across different genres and decades.",
-      tools: ["R", "sentimentr", "ggplot2", "dplyr", "quanteda"],
-      image: "/assets/projects/song.png",
-      pdf: "/assets/projects/song.pdf",
-      link: "#"
-    },
-    {
-      title: "Logistics and Supply Chain Optimisation Game",
-      description: "Optimised logistics and supply chain operations using simulation and optimization techniques.",
-      tools: ["Python", "R"],
-      image: "/assets/projects/logistics.png",
-      pdf: "/assets/projects/logistics.pdf",
-      link: "#"
-    },
-    {
-      title: "Titanic Exploratory Data Analysis",
-      description: "Conducted exploratory data analysis on Titanic dataset, visualizing survival rates and passenger demographics.",
-      tools: ["R", "ggplot2", "dplyr", "tidyverse"],
-      image: "/assets/projects/titanic.png",
-      pdf: "/assets/projects/titanic.pdf",
-      link: "#"
-    },
-    {
       title: "Energy Forecasting Model",
       description: "Developed a forecasting model for energy consumption using time series analysis.",
       tools: ["Python", "Pandas", "NumPy", "Statsmodels", "XGBoost"],
@@ -127,6 +119,13 @@
       tools: ["Python", "NumPy", "SciPy", "Matplotlib"],
       image: "/assets/projects/scraping.png",
       pdf: "/assets/projects/scraping.pdf",
+      link: "#"
+    },
+    {
+      title: "Q-Learning Airport Optimisation",
+      description: "Optimised airport rubbish collecting machine using Q-learning, achieving 90% efficiency in waste collection.",
+      tools: ["Python"],
+      image: "/assets/projects/robotic.png",
       link: "#"
     },
     {
@@ -149,7 +148,15 @@
       tools: ["R", "ggplot2", "SQL", "Power BI"],
       image: "/assets/projects/segmentation.png",
       link: "#"
-    }
+    },
+    {
+      title: "Titanic Exploratory Data Analysis",
+      description: "Conducted exploratory data analysis on Titanic dataset, visualizing survival rates and passenger demographics.",
+      tools: ["R", "ggplot2", "dplyr", "tidyverse"],
+      image: "/assets/projects/titanic.png",
+      pdf: "/assets/projects/titanic.pdf",
+      link: "#"
+    },
   ];
 
   let navbarHeight = $state(70);
@@ -177,9 +184,9 @@
     <ExperienceList items={experienceItems} />
   </StickyTitleSection>
 
-  <TitleSection title="Projects" id="projects">
+  <StickyTitleSection title="Projects" id="projects">
     <ProjectList items={projectItems} />
-  </TitleSection>
+  </StickyTitleSection>
   
   <StickyTitleSection title="Education" id="education">
     <EducationList items={educationItems} />

@@ -52,12 +52,12 @@
 </style>
 
 <section {id} class="mt-40 mb-16" bind:this={sectionRef}>
-  <div class="max-w-[1400px] mx-auto px-[clamp(1rem,5vw,2.5rem)]">
+  <div class="mx-auto px-[clamp(1rem,5vw,2.5rem)]" style="max-width: var(--max-container-width);">
     <div class="flex flex-col lg:flex-row gap-8">
       <!-- Left column: Sticky section title -->
       <div class={`lg:w-1/3 lg:sticky lg:top-24 self-start section-entrance title-entrance ${isVisible ? 'visible' : ''}`}>
-        <div class="border-t-2 border-neutral-800 w-12 mb-4 pt-2"></div>
-        <h2 class="text-[clamp(1.5rem,4vw,2.25rem)]">{title}</h2>
+        <div class="border-t-2 w-12 mb-4 pt-2" style="border-color: var(--color-border-dark);"></div>
+        <h2>{title}</h2>
       </div>
 
       <!-- Right column: Content -->

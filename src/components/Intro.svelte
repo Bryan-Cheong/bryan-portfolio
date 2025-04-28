@@ -25,10 +25,10 @@
 <section id="introPage" class="w-full max-w-3xl mx-auto flex flex-col justify-center px-[clamp(1rem,5vw,2.5rem)]" style="min-height: calc(100vh - var(--navbar-height, 70px) - 3rem);">
   <!-- Text content -->
   <div class="flex flex-col gap-[clamp(1.5rem,4vw,2.5rem)] pb-[clamp(4rem,10vh,8rem)]">
-    <h2 class={`text-[clamp(1.75rem,5vw,3.5rem)] text-left intro-entrance intro-entrance-1 ${isPageLoaded ? 'loaded' : ''}`}>
+    <h1 class={`text-[clamp(1.75rem,5vw,3.5rem)] text-left intro-entrance intro-entrance-1 ${isPageLoaded ? 'loaded' : ''}`}>
       Analytical. Adaptable. <br />
       Always Learning.
-    </h2>
+    </h1>
     <p class={`text-[clamp(1rem,2vw,1.25rem)] max-w-3xl text-left intro-entrance intro-entrance-2 ${isPageLoaded ? 'loaded' : ''}`}>
       I turn data into stories, models into strategy, and insight into action.
     </p>

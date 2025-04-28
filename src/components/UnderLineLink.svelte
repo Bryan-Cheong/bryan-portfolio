@@ -12,32 +12,33 @@
 <style>
   .nav-link-underline {
     position: absolute;
-    bottom: -1px;
     left: 0;
+    bottom: -4px;
     height: 2px;
     width: 100%;
-    background-color: #1e3a8a; /* blue-900 */
+    background-color: var(--color-accent);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.5s ease-out;
   }
-  
+
   .nav-link:hover .nav-link-underline {
     transform: scaleX(1);
     transform-origin: left;
   }
 
   .nav-active {
-    color: #1e3a8a !important; /* blue-900 */
-    font-weight: 600;
+    color: var(--color-accent); /* blue-900 */
+    font-weight: 550;
   }
 </style>
+
 <a
   {href}
   {target}
   {rel}
   {onclick}
-  class={`relative group nav-link duration-200 hover:text-blue-900 text-neutral-800 font-medium text-base sm:text-lg ${className}`}
+  class={`nav-link ${className}`}
 >
   <span>{text}</span>
   <span class="nav-link-underline"></span>

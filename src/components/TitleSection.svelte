@@ -52,10 +52,10 @@
 </style>
 
 <section {id} class="mt-40 mb-16 pt-6" bind:this={sectionRef}>
-  <div class="max-w-[1400px] mx-auto px-[clamp(1rem,5vw,2.5rem)]">
+  <div class="mx-auto px-[clamp(1rem,5vw,2.5rem)]" style="max-width: var(--max-container-width);">
     <div class={`section-entrance title-entrance ${isVisible ? 'visible' : ''}`}>
-      <div class="border-t-2 border-neutral-800 w-12 mb-4 pt-2"></div>
-      <h2 class="text-[clamp(1.5rem,4vw,2.25rem)] mb-12">{title}</h2>
+      <div class="border-t-2 w-12 mb-4 pt-2" style="border-color: var(--color-border-dark);"></div>
+      <h2 class="mb-12">{title}</h2>
     </div>
     <div class={`flex flex-col gap-12 section-entrance content-entrance ${isVisible ? 'visible' : ''}`}>
       {@render children()}
