@@ -114,41 +114,33 @@
       link: "#"
     },
     {
-      title: "Energy Risk, Hedging, and Real Options Valuation",
-      description: "Developed a model to assess energy risk and evaluate hedging strategies using real options valuation.",
-      tools: ["Python", "NumPy", "SciPy", "Matplotlib"],
-      image: "/assets/projects/scraping.png",
-      pdf: "/assets/projects/scraping.pdf",
-      link: "#"
-    },
-    {
       title: "Q-Learning Airport Optimisation",
       description: "Optimised airport rubbish collecting machine using Q-learning, achieving 90% efficiency in waste collection.",
       tools: ["Python"],
       image: "/assets/projects/robotic.png",
       link: "#"
     },
-    {
-      title: "A/B Testing Analysis",
-      description: "Conducted A/B testing for a marketing campaign, resulting in a 15% increase in conversion rates.",
-      tools: ["Python", "R", "SQL"],
-      image: "/assets/projects/abtesting.png",
-      link: "#"
-    },
-    {
-      title: "Tetris AI",
-      description: "Implemented a Tetris heuristics evaluation AI, scored 28,000+ points using 400 blocks, 80th percentile in UCL's cohort",
-      tools: ["Python", "NumPy", "Pygame"],
-      image: "/assets/projects/tetris.png",
-      link: "#"
-    },
-    {
-      title: "Public Perception of Benefit Fraud",
-      description: "Analysed eight variables in the 2019 British Social Survey on benefit fraud with two-sided t-tests, linear regression and more using R. Found public estimates (34.6%) far exceeded the government's (1.1%), with discrepancies influenced by political affiliation and education level. Highlighted the need for targeted education to address public misconceptions",
-      tools: ["R", "ggplot2", "SQL", "Power BI"],
-      image: "/assets/projects/segmentation.png",
-      link: "#"
-    },
+    // {
+    //   title: "A/B Testing Analysis",
+    //   description: "Conducted A/B testing for a marketing campaign, resulting in a 15% increase in conversion rates.",
+    //   tools: ["Python", "R", "SQL"],
+    //   image: "/assets/projects/abtesting.png",
+    //   link: "#"
+    // },
+    // {
+    //   title: "Tetris AI",
+    //   description: "Implemented a Tetris heuristics evaluation AI, scored 28,000+ points using 400 blocks, 80th percentile in UCL's cohort",
+    //   tools: ["Python", "NumPy", "Pygame"],
+    //   image: "/assets/projects/tetris.png",
+    //   link: "#"
+    // },
+    // {
+    //   title: "Public Perception of Benefit Fraud",
+    //   description: "Analysed eight variables in the 2019 British Social Survey on benefit fraud with two-sided t-tests, linear regression and more using R. Found public estimates (34.6%) far exceeded the government's (1.1%), with discrepancies influenced by political affiliation and education level. Highlighted the need for targeted education to address public misconceptions",
+    //   tools: ["R", "ggplot2", "SQL", "Power BI"],
+    //   image: "/assets/projects/segmentation.png",
+    //   link: "#"
+    // },
     {
       title: "Titanic Exploratory Data Analysis",
       description: "Conducted exploratory data analysis on Titanic dataset, visualizing survival rates and passenger demographics.",

@@ -11,7 +11,7 @@ _Refining design, ensuring performance, and implementing advanced features for a
 - [x] Use numeric `font-weight` consistently `[HIGH]`
 - [ ] Extract colour palette into CSS variables `[HIGH]`
 - [ ] Review spacing (`gap`, `padding`, `margin`) for consistency `[HIGH]`
-- [ ] Finalise responsive behaviour across all devices `[HIGH]`
+- [x] Finalise responsive behaviour across all devices `[HIGH]`
 - [ ] Explore dynamic colour themes (light/dark/custom themes) `[MEDIUM]`
 
 ---
@@ -24,6 +24,7 @@ _Refining design, ensuring performance, and implementing advanced features for a
 - [ ] Refactor `Header` component `[HIGH]`
 - [x] Improve active link state styling `[HIGH]`
 - [ ] Enhance mobile menu accessibility (ARIA roles, focus management) `[MEDIUM]`
+- [ ] Improve the scroll progress bar, more responsive `[MEDIUM]`
 
 ### Projects Section
 - [ ] Polish project card layout, find inspirations `[HIGH]`
