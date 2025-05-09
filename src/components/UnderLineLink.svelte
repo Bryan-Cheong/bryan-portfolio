@@ -10,6 +10,10 @@
 </script>
 
 <style>
+  .nav-link {
+    position: relative;
+    display: inline-block;
+  }
   .nav-link-underline {
     position: absolute;
     left: 0;

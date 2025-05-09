@@ -2,7 +2,7 @@
   import { browser } from '$app/environment';
   import { page } from '$app/stores';
   import UnderLineLink from './UnderLineLink.svelte';
-  import { onMount } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
   
   let { y } = $props();
   let isMenuOpen = $state(false);
@@ -47,6 +47,27 @@
   // Update scroll progress when y changes
   $effect(() => {
     if (browser) {
+      if (isMenuOpen) {
+        // Prevent scrolling on body when menu is open
+        document.body.style.overflow = 'hidden';
+        document.body.style.touchAction = 'none'; // For mobile devices
+      } else {
+        // Restore scrolling when menu is closed
+        document.body.style.overflow = '';
+        document.body.style.touchAction = '';
+      }
+
+      // Clean up on component destruction
+      onDestroy(() => {
+        if (browser) {
+          document.body.style.overflow = '';
+          document.body.style.touchAction = '';
+          document.body.style.position = '';
+          document.body.style.width = '';
+          document.body.style.top = '';
+        }
+      });
+
       scrollProgress = Math.min((y / (document.body.scrollHeight - window.innerHeight)) * 100, 100);
 
       // Check which section is in view
@@ -123,9 +144,13 @@
   class:bg-[var(--color-surface-95)]={y > 0}
   class:backdrop-blur-sm={y > 0}
   class:bg-transparent={y <= 0}
-  style="padding-top: var(--spacing-header-padding); padding-bottom: var(--spacing-header-padding);"
+  style="padding-top: var(--spacing-header-footer-y); 
+         padding-bottom: var(--spacing-header-footer-y);"
 >
-  <div class="mx-auto px-[clamp(1rem,5vw,2.5rem)] flex items-center justify-between" style="max-width: var(--max-container-width);">
+  <div class="mx-auto px-[clamp(1rem,5vw,2.5rem)] flex items-center justify-between"
+       style="max-width: var(--max-container-width);
+       padding-left: var(--spacing-header-footer-x); 
+       padding-right: var(--spacing-header-footer-x);">
     <!-- Logo with hover effect -->
     <a href="/" aria-label="Bryan Cheong — Homepage" class="relative h-auto overflow-hidden flex items-center group">
       <div class="relative">
@@ -152,7 +177,9 @@
       </nav>
       <button onclick={toggleMenu} 
               class="md:hidden relative z-[35] w-7 h-7 focus:outline-none p-1 cursor-pointer flex items-center justify-center" 
-              aria-label="Toggle Navigation Menu">
+              aria-label="Toggle Navigation Menu"
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu">
         <div class="relative w-5 h-4">
           <!-- Hamburger Icon -->
           <span class={`absolute h-0.5 w-5 bg-neutral-800 transform transition-all duration-300 ${isMenuOpen ? 'rotate-45 top-[7px]' : 'top-0'}`}></span>
@@ -163,16 +190,21 @@
     </div>
   </div>
   
-  <div class="absolute bottom-0 left-0 h-[3px] bg-[var(--color-accent)] transition-all duration-300" 
+  <div class="absolute bottom-0 left-0 h-[3px] bg-[var(--color-accent)] transition-all duration-150" 
        style={`width: ${scrollProgress}%`}></div>
 </header>
 
 <div
+  id="mobile-menu"
   class="fixed inset-0 pt-16 bg-[var(--color-surface-95)] z-[25] md:hidden flex flex-col items-center justify-center gap-8 transition-opacity duration-300"
   class:opacity-100={isMenuOpen}
   class:pointer-events-auto={isMenuOpen}
   class:opacity-0={!isMenuOpen}
   class:pointer-events-none={!isMenuOpen}
+  role="dialog"
+  aria-modal="true"
+  aria-label="Mobile Navigation Menu"
+  aria-hidden={!isMenuOpen}
 >
 
   {#each tabs as tab, i}

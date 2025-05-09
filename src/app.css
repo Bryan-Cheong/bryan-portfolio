@@ -42,7 +42,8 @@
   --color-hover-light: rgba(250, 250, 249, 0.5);  /* Stone-50 @ 50% */
 
   /* Spacing */
-  --spacing-header-padding: clamp(1rem, 1vw, 1.5rem);
+  --spacing-header-footer-x: clamp(1rem, 5vw, 2.5rem);
+  --spacing-header-footer-y: clamp(1rem, 1vw, 1.5rem);
 }
 
 html {

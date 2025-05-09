@@ -21,10 +21,11 @@ _Refining design, ensuring performance, and implementing advanced features for a
 
 ### Navigation & Header
 - [x] Refactor `UnderLineLink` component `[HIGH]`
-- [ ] Refactor `Header` component `[HIGH]`
+- [x] Refactor `Header` component `[HIGH]`
 - [x] Improve active link state styling `[HIGH]`
-- [ ] Enhance mobile menu accessibility (ARIA roles, focus management) `[MEDIUM]`
-- [ ] Improve the scroll progress bar, more responsive `[MEDIUM]`
+- [x] Enhance mobile menu accessibility (ARIA roles, focus management) `[MEDIUM]`
+- [x] Prevent scrolling when mobile nav bar is open. `[MEDIUM]`
+- [x] Improve the scroll progress bar, more responsive `[MEDIUM]`
 
 ### Projects Section
 - [ ] Polish project card layout, find inspirations `[HIGH]`
