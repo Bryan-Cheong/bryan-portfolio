@@ -18,7 +18,7 @@
 
 <div class="relative flex flex-col max-w-[1400px] mx-auto w-full text-sm
 sm:text-base min-h-screen">
-    <div class={"fixed bottom-10 right-10 duration-200 flex p-10 z-[10] " + (
+    <div class={"fixed bottom-10 right-10 duration-300 flex p-10 z-[10] " + (
             y > 0 ? ' opacity-100 pointer-events-auto': ' pointer-events-none opacity-0'
     )}>
     <button onclick={scrollToTop} 

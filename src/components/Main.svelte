@@ -15,140 +15,160 @@
     {
       logo: '/assets/anavio.avif',
       company: 'Anavio Capital Partners',
-      title: 'Quantitative Analytics Platform Intern',
-      dates: 'August 2021 → Today',
-      responsibilities: [
-        "Long Short Equity Portfolio Automation",
+      title: 'Equity Analytics Intern – Long/Short Strategy',
+      dates: 'July 2023 → September 2023',
+      responsibilities: ["Built an automated equity screening dashboard integrating 15+ capital efficiency metrics to support uncorrelated long/short strategies targeting idiosyncratic returns",
+      "Scaled daily coverage from 10 to 200 tickers, reducing manual workload by 80% through automated data ingestion, computation, and reporting",
+      "Enhanced pipeline robustness with 100+ Pytest tests and six error-handling decorators, significantly reducing downtime and debugging time",
+      "Streamlined communication with management by translating complex logic into clear flowcharts and wireframes, accelerating alignment and halving delivery time"
       ]
     },
     {
       logo: '/assets/gse.png',
       company: 'GSE-M Technology Sdn. Bhd',
-      title: 'Enterprise Resource Planning Assistant',
-      dates: 'July 2023 → Today',
+      title: 'Enterprise Resource Planning (ERP) Assistant',
+      dates: 'May 2023 → July 2023',
       responsibilities: [
-        "Implemented ERP system",
-        "Trained staff on system usage"
+        "Collaborated with cross-functional ERP users across five departments to gather 30+ requirements, understand operational challenges, and locate critical bugs",
+        "Tailored the ERP with consultants to enhance efficiency by 25% and meet departmental needs",
+        "Co-led daily conference room pilots, training 90 employees on the ERP system to ensure smooth system adoption"
       ]
     },
     {
       logo: 'assets/britishredcross.png',
       company: 'British Red Cross',
       title: 'Data Analyst',
-      dates: 'October 2020 → July 2021',
+      dates: 'September 2022 → April 2023',
       responsibilities: [
-        "Analysed complaints data to identify trends and areas for improvement",
-        "Developed dashboards to visualize data insights for stakeholders"
+        "Developed a Power BI app with 20+ interactive dashboards to analyse complaints data, providing actionable insights for support teams and key stakeholder reports. Enhanced decision-making and reduced complaint resolution time by 50%",
+        "Built an ETL pipeline in Power BI Dataflows to extract data from four sources, normalised it into fact and dimension tables, and leveraged DAX for advanced reporting features like geographical drill-downs and slicing, enabling consistent and scalable reporting",
+        "Secured future development by presenting a streamlined issue resolution system along with a deployment manual to the Head of Data"
       ]
     },
     {
       logo: 'assets/subplace.png',
       company: 'Subplace',
       title: 'Software Reliability Intern',
-      dates: 'March 2021 → Today',
+      dates: 'June 2022 → August 2022',
       responsibilities: [
-        "Implemented monitoring tools to track system performance and reliability",
-        "Conducted root cause analysis for system outages and performance issues",
-        "Advocated for best practices in software development and testing like agile methodologies and test-driven development",
-        "Created documentation for incident response procedures"
+        "Improved maintenance efficiency by 60% by enhancing test coverage with systematic test cases and modular templates",
+        "Collaborated with software engineers to resolve over 200 issues raised from thorough testing",
+        "Advocated for best practices in software development and testing like agile methodologies and test-driven development"
       ]
-    }
-  ];
-
-  const educationItems = [
-    {
-      institution: 'Imperial College London',
-      degree: 'MSc in Business Analytics',
-      dates: '2024 → 2025',
-      website: 'https://www.imperial.ac.uk/'
-    },
-    {
-      institution: 'University College London',
-      degree: 'BSc in Computer Science',
-      dates: '2021 → 2024',
-      website: 'https://www.ucl.ac.uk/'
     }
   ];
 
   const projectItems = [
     {
       title: "Text Analytics Project on Song Lyrics",
-      description: "Analysed song lyrics to identify patterns in popular music across different genres and decades.",
-      tools: ["R", "sentimentr", "ggplot2", "dplyr", "quanteda"],
+      description: "Applied NLP and ML to analyse 40,000+ song lyrics, uncovering genre trends in sentiment, explicit content, and topics. Used LASSO with uni+bigrams and FastText word embeddings to predict popularity and evaluate genre transferability.",
+      tools: ["R", "tidyverse", "quanteda", "textclean", "glmnet", "FastText word embeddings", "sentimentr", "stm",],
       image: "/assets/projects/song.png",
-      pdf: "/assets/projects/song.pdf",
-      link: "#"
+      pdf: "/assets/projects/song.pdf"
     },
     {
       title: "Logistics and Supply Chain Optimisation Game",
-      description: "Optimised logistics and supply chain operations using simulation and optimization techniques.",
-      tools: ["Python", "R"],
+      description: "Simulated a multi-region supply chain using hybrid demand forecasting and cost-benefit analysis to guide factory and warehouse expansion. Applied adjusted reorder points and Silver-Meal heuristics to manage seasonal inventory, securing 2nd place in Imperial's cohort.",
+      tools: ["Python", "R", "Excel", "SARIMA", "Croston's method", "Silver-Meal heuristic", "Linear regression"],
       image: "/assets/projects/logistics.png",
-      pdf: "/assets/projects/logistics.pdf",
-      link: "#"
+      pdf: "/assets/projects/logistics.pdf"
     },
     {
       title: "Beat the Bookies",
-      description: "Premier League betting prediction model using machine learning.",
-      tools: ["Python", "Plotly", "Pandas", "Flask"],
+      description: "Engineered a Premier League match outcome predictor achieving 51% validation accuracy with CatBoost. Feature-engineered tuned Pi-rating variants, applied SHAP-based feature selection, and explored pre-game sentiment analysis using LLMs and the Nitter API.",
+      tools: ["Python", "Pandas", "CatBoost", "Random Forest", "SHAP", "Nitter API", "Pi-rating", "VADER"],
       image: "/assets/projects/bookies.png",
-      pdf: "/assets/projects/bookies.pdf",
-      link: "#"
-
+      pdf: "/assets/projects/bookies.pdf"
     },
     {
-      title: "RIE Final Year Project",
-      description: "RIE Noise Reduction Algorithm for Lagged Covariance Matrices",
-      tools: ["Python", "NumPy", "SciPy", "Matplotlib"],
+      title: "RIE Cleaning of Lagged Covariance Matrices",
+      description: "Designed a cleaning algorithm for lagged covariance matrices using Rotationally Invariant Estimators (RIEs), correcting singular value distortions via spectral projections guided by the Marchenko-Pastur law. The method achieved 100% noise reduction in AR(0) models and ~20% improvement in signal-to-noise ratio for AR(1), with greater gains as dimensionality increased. This improves the accuracy of high-dimensional covariance estimation for applications in portfolio risk modelling, signal processing, and time series forecasting.",
+      tools: ["Python", "NumPy", "Pandas", "Matplotlib", "SciPy", "scikit-learn", "Statsmodels", "Marchenko-Pastur law", "SVD", "Rotationally Invariant Estimators", ],
       image: "/assets/projects/rie.png",
       pdf: "assets/projects/rie.pdf",
-      link: "#",
       github: "https://github.com/Bryan-Cheong/RIE-Singular-Value-Cleaning-of-Lagged-Covariance-Matrices"
     },
     {
-      title: "Energy Forecasting Model",
-      description: "Developed a forecasting model for energy consumption using time series analysis.",
-      tools: ["Python", "Pandas", "NumPy", "Statsmodels", "XGBoost"],
+      title: "Energy Demand Forecasting Model",
+      description: "Forecasted UK electricity demand by engineering lagged, Heating Degree Days (HDDs), and calendar features; progressed from linear models to XGBoost. Achieved 96.3% R² with strong generalisation and low residual autocorrelation.",
+      tools: ["Python", "Pandas", "NumPy", "Statsmodels", "XGBoost", "Random Forest", "Ridge Regression", "workalendar"],
       image: "/assets/projects/energy_forecasting.png",
-      pdf: "/assets/projects/energy_forecasting.pdf",
-      link: "#"
+      pdf: "/assets/projects/energy_forecasting.pdf"
     },
+    // {
+    //   title: "Q-Learning Airport Optimisation",
+    //   description: "Optimised airport rubbish collecting machine using Q-learning, achieving 90% efficiency in waste collection.",
+    //   tools: ["Python"],
+    //   image: "/assets/projects/robotic.png"
+    // },
     {
-      title: "Q-Learning Airport Optimisation",
-      description: "Optimised airport rubbish collecting machine using Q-learning, achieving 90% efficiency in waste collection.",
-      tools: ["Python"],
-      image: "/assets/projects/robotic.png",
-      link: "#"
+      title: "SvelteKit and TailwindCSS Portfolio",
+      description: "Developed a responsive portfolio with SvelteKit and TailwindCSS featuring a comprehensive design system using CSS variables for consistent styling. Implemented accessible components with ARIA attributes, smooth Svelte transitions, SEO optimisation, and Google Analytics integration while ensuring performance through Svelte's compiler design.",
+      tools: ["SvelteKit", "TailwindCSS", "JavaScript", "HTML", "CSS", "Vercel", "Google Analytics", "SEO"],
+      website: "/"
     },
     // {
     //   title: "A/B Testing Analysis",
     //   description: "Conducted A/B testing for a marketing campaign, resulting in a 15% increase in conversion rates.",
     //   tools: ["Python", "R", "SQL"],
-    //   image: "/assets/projects/abtesting.png",
-    //   link: "#"
+    //   image: "/assets/projects/abtesting.png"
     // },
     // {
     //   title: "Tetris AI",
     //   description: "Implemented a Tetris heuristics evaluation AI, scored 28,000+ points using 400 blocks, 80th percentile in UCL's cohort",
     //   tools: ["Python", "NumPy", "Pygame"],
-    //   image: "/assets/projects/tetris.png",
-    //   link: "#"
+    //   image: "/assets/projects/tetris.png"
     // },
     // {
-    //   title: "Public Perception of Benefit Fraud",
-    //   description: "Analysed eight variables in the 2019 British Social Survey on benefit fraud with two-sided t-tests, linear regression and more using R. Found public estimates (34.6%) far exceeded the government's (1.1%), with discrepancies influenced by political affiliation and education level. Highlighted the need for targeted education to address public misconceptions",
-    //   tools: ["R", "ggplot2", "SQL", "Power BI"],
-    //   image: "/assets/projects/segmentation.png",
-    //   link: "#"
+    //   title: "Titanic Exploratory Data Analysis",
+    //   description: "Conducted exploratory data analysis on Titanic dataset, visualizing survival rates and passenger demographics.",
+    //   tools: ["R", "ggplot2", "dplyr", "tidyverse"],
+    //   image: "/assets/projects/titanic.png",
+    //   pdf: "/assets/projects/titanic.pdf"
     // },
+  ];
+
+  const educationItems = [
     {
-      title: "Titanic Exploratory Data Analysis",
-      description: "Conducted exploratory data analysis on Titanic dataset, visualizing survival rates and passenger demographics.",
-      tools: ["R", "ggplot2", "dplyr", "tidyverse"],
-      image: "/assets/projects/titanic.png",
-      pdf: "/assets/projects/titanic.pdf",
-      link: "#"
+      logo: '/assets/imperial.png',
+      institution: 'Imperial College London',
+      degree: 'MSc in Business Analytics',
+      dates: '2024 → 2025',
+      courses: [
+        "Generative AI and Large Language Models",
+        "Machine Learning",
+        "Financial Analytics",
+        "Text Analytics",
+        "Digital Marketing Analytics",
+        "Logistics and Supply Chain Analytics",
+        "Energy Analytics",
+        "Network Analytics",
+        "Optimisation and Decision Models",
+        "Statistics and Econometrics",
+        "Data Visualisation",
+        "Data Management and Ethics"
+      ],
+      achievements: []
     },
+    {
+      logo: '/assets/ucl.png',
+      institution: 'University College London',
+      degree: 'BSc in Computer Science',
+      dates: '2021 → 2024',
+      courses: [
+        "Data Structures and Algorithms",
+        "Machine Learning",
+        "Reinforcement Learning",
+        "Software Engineering",
+        "Object-Oriented Programming",
+        "Cyber Security",
+        "Mathematics and Statistics",
+        "Theory of Computation",
+        "Computer Architecture and Concurrency",
+        "Logic"
+      ],
+      achievements: []
+    }
   ];
 
   let navbarHeight = $state(70);

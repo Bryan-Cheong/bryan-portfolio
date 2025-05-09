@@ -32,8 +32,8 @@
   }
 
   .nav-active {
-    color: var(--color-accent); /* blue-900 */
-    font-weight: 550;
+    color: var(--color-accent);
+    font-weight: var(--font-weight-bold)
   }
 </style>
 

@@ -1,87 +1,16 @@
-<script>
-  // Technical skills with proficiency levels
-  const technicalSkills = {
-    proficient: ["Python", "R", "Data Visualization", "Statistical Analysis"],
-    intermediate: ["SQL", "Machine Learning", "Power BI"],
-    basic: ["JavaScript", "TensorFlow", "Docker"]
-  };
-  
-  // Soft skills
-  const softSkills = [
-    "Data Storytelling",
-    "Problem Solving",
-    "Communication",
-    "Project Management",
-    "Critical Thinking",
-    "Team Collaboration"
-  ];
-</script>
-
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<div class="flex flex-col max-w-none mb-12">
   <!-- Bio Section -->
-  <div class="lg:col-span-2">
-    <h3 class="text-xl font-medium mb-6">My Story</h3>
-    <div class="prose prose-neutral max-w-none">
-      <p>
-        With a background in Computer Science from University College London and currently pursuing a Master's in Business Analytics at Imperial College London, I bring a unique blend of technical expertise and business acumen to data analysis.
-      </p>
-      <p>
-        My experience spans quantitative finance, data visualization, and software reliability, giving me a comprehensive understanding of how data drives decision-making across industries. I'm passionate about transforming complex data into actionable insights that help organizations thrive.
-      </p>
-      <p>
-        Throughout my career, I've worked with diverse teams to develop analytical solutions that address real-world challenges. Whether it's predicting market trends, optimizing business processes, or enhancing customer experiences, I approach each project with curiosity and rigor.
-      </p>
-    </div>
-    
-    <!-- Soft Skills -->
-    <h3 class="text-xl font-medium mt-10 mb-6">Soft Skills</h3>
-    <div class="flex flex-wrap gap-3">
-      {#each softSkills as skill}
-        <span class="px-4 py-2 bg-blue-100 text-blue-900 rounded-full text-sm font-medium">
-          {skill}
-        </span>
-      {/each}
-    </div>
-  </div>
-  
-  <!-- Technical Skills by Proficiency Level -->
   <div>
-    <h3 class="text-xl font-medium mb-6">Technical Skills</h3>
-    
-    <!-- Proficient Skills -->
-    <div class="mb-6">
-      <h4 class="text-lg font-medium text-blue-900 mb-3">Proficient</h4>
-      <div class="flex flex-wrap gap-2">
-        {#each technicalSkills.proficient as skill}
-          <span class="px-3 py-1.5 bg-blue-100 text-blue-900 rounded text-sm font-medium">
-            {skill}
-          </span>
-        {/each}
-      </div>
-    </div>
-    
-    <!-- Intermediate Skills -->
-    <div class="mb-6">
-      <h4 class="text-lg font-medium text-blue-800 mb-3">Intermediate</h4>
-      <div class="flex flex-wrap gap-2">
-        {#each technicalSkills.intermediate as skill}
-          <span class="px-3 py-1.5 bg-blue-50 text-blue-800 rounded text-sm font-medium">
-            {skill}
-          </span>
-        {/each}
-      </div>
-    </div>
-    
-    <!-- Basic Skills -->
-    <div>
-      <h4 class="text-lg font-medium text-blue-700 mb-3">Basic</h4>
-      <div class="flex flex-wrap gap-2">
-        {#each technicalSkills.basic as skill}
-          <span class="px-3 py-1.5 bg-stone-100 text-blue-700 rounded text-sm font-medium">
-            {skill}
-          </span>
-        {/each}
-      </div>
+    <div class="space-y-4 text-[var(--color-text-secondary)]">
+      <p>
+        I'm Bryan, a data analyst with a passion for transforming complex data into actionable insights. My expertise lies in leveraging advanced analytical techniques and data visualisation tools to uncover trends, patterns, and opportunities that drive strategic decision-making.
+      </p>
+      <p>
+        My professional journey encompasses equity analytics to complaints data visualisation. This diverse experience has honed my ability to navigate through different data paradigms, allowing me to adapt and apply my skills across various domains. I thrive on challenges that require a blend of technical acumen and creative thinking, and I'm always eager to learn and grow in this ever-evolving field.
+      </p>
+      <p>
+        I believe great work happens through collaboration. I genuinely enjoy teaming up with people across different departments to solve tricky problems. Whether I'm helping predict trends, improve workflows, or enhance user experiences, I combine detail-oriented analysis with creative thinking to deliver solutions that actually make a difference.
+      </p>
     </div>
   </div>
 </div>

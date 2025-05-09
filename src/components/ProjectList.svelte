@@ -28,7 +28,17 @@
           {/if}
           {#if project.pdf}
             <a href={project.pdf} target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center gap-1">
-              <i class="fa-solid fa-file-pdf"></i> View Report
+              <i class="fa-solid fa-file-pdf"></i> View PDF
+            </a>
+          {/if}
+          {#if project.link}
+            <a href={project.link} class="hover:underline flex items-center gap-1">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project
+            </a>
+          {/if}
+          {#if project.website}
+            <a href={project.website} class="hover:underline flex items-center gap-1">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Website
             </a>
           {/if}
         </small>

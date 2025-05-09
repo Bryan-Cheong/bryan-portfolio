@@ -51,8 +51,10 @@
   }
 </style>
 
-<section {id} class="mt-40 mb-16" bind:this={sectionRef}>
-  <div class="mx-auto px-[clamp(1rem,5vw,2.5rem)]" style="max-width: var(--max-container-width);">
+<section {id} class="mt-32 mb-32" bind:this={sectionRef}>
+  <div class="mx-auto" style="max-width: var(--max-container-width);
+                              padding-left: var(--spacing-header-footer-x); 
+                              padding-right: var(--spacing-header-footer-x);">
     <div class="flex flex-col lg:flex-row gap-8">
       <!-- Left column: Sticky section title -->
       <div class={`lg:w-1/3 lg:sticky lg:top-24 self-start section-entrance title-entrance ${isVisible ? 'visible' : ''}`}>

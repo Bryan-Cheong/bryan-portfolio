@@ -51,8 +51,10 @@
   }
 </style>
 
-<section {id} class="mt-40 mb-16 pt-6" bind:this={sectionRef}>
-  <div class="mx-auto px-[clamp(1rem,5vw,2.5rem)]" style="max-width: var(--max-container-width);">
+<section {id} class="mt-32 mb-32 pt-6" bind:this={sectionRef}>
+  <div class="mx-auto" style="max-width: var(--max-container-width);
+                              padding-left: var(--spacing-header-footer-x); 
+                              padding-right: var(--spacing-header-footer-x);">
     <div class={`section-entrance title-entrance ${isVisible ? 'visible' : ''}`}>
       <div class="border-t-2 w-12 mb-4 pt-2" style="border-color: var(--color-border-dark);"></div>
       <h2 class="mb-12">{title}</h2>
