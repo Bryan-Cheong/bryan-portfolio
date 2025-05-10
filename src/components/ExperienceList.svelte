@@ -54,6 +54,7 @@
         <div 
           id={`content-${index}`}
           transition:slide={{ duration: 300, easing: cubicOut }}
+          class="mt-2"
         >
           <!-- Aligned content -->
           <div class="flex">
