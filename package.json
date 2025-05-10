@@ -33,6 +33,7 @@
 		"vite": "^6.2.5"
 	},
 	"dependencies": {
-		"@studio-freight/lenis": "^1.0.42"
+		"@studio-freight/lenis": "^1.0.42",
+		"@vercel/analytics": "^1.5.0"
 	}
 }
