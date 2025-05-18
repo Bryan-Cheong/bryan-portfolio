@@ -9,8 +9,8 @@ _Refining design, ensuring performance, and implementing advanced features for a
 ### Typography & Design System
 - [x] Standardise font sizes using `clamp()` `[HIGH]`
 - [x] Use numeric `font-weight` consistently `[HIGH]`
-- [ ] Extract colour palette into CSS variables `[HIGH]`
-- [ ] Review spacing (`gap`, `padding`, `margin`) for consistency `[HIGH]`
+- [x] Extract colour palette into CSS variables `[HIGH]`
+- [x] Review spacing (`gap`, `padding`, `margin`) for consistency `[HIGH]`
 - [x] Finalise responsive behaviour across all devices `[HIGH]`
 - [ ] Explore dynamic colour themes (light/dark/custom themes) `[MEDIUM]`
 
@@ -29,7 +29,7 @@ _Refining design, ensuring performance, and implementing advanced features for a
 
 ### Projects Section
 - [ ] Polish project card layout, find inspirations `[HIGH]`
-- [ ] Insert finalised project content with visuals and descriptions `[HIGH]`
+- [x] Insert finalised project content with visuals and descriptions `[HIGH]`
 - [ ] Implement filtering by tools/technologies `[LOW]`
 
 ### Experience & Education
@@ -37,9 +37,9 @@ _Refining design, ensuring performance, and implementing advanced features for a
 - [x] Ensure mobile-friendly and consistent design `[HIGH]`
 
 ### Footer
-- [ ] Standardise spacing and link structure `[MEDIUM]`
+- [x] Standardise spacing and link structure `[MEDIUM]`
 - [ ] Add Google Analytics to Privacy Policy and Terms document `[MEDIUM]`
-- [ ] Add relevant links or social icons `[LOW]`
+- [x] Add relevant links or social icons `[LOW]`
 
 ### Form
 - [ ] Add email form for contact `[LOW]`
@@ -54,8 +54,8 @@ _Refining design, ensuring performance, and implementing advanced features for a
 - [ ] Add favicon and social preview images `[MEDIUM]`
 
 ### Analytics Integration
-- [ ] Set up Google Analytics and Tag Manager `[HIGH]`
-- [ ] Ensure GDPR compliance if required `[MEDIUM]`
+- [x] Set up Google Analytics and Tag Manager `[HIGH]`
+- [x] Ensure GDPR compliance if required `[MEDIUM]`
 
 ### Performance Improvements
 - [ ] Lazy load images and assets `[HIGH]`
@@ -74,7 +74,7 @@ _Refining design, ensuring performance, and implementing advanced features for a
 ### Accessibility Improvements
 - [ ] Ensure full keyboard navigation support `[MEDIUM]`
 - [ ] Verify colour contrast ratios `[MEDIUM]`
-- [ ] Add ARIA labels where appropriate `[MEDIUM]`
+- [x] Add ARIA labels where appropriate `[MEDIUM]`
 
 ### Deployment & Optimisation
 - [x] Set up deployment pipeline (e.g., Vercel or Netlify) `[HIGH]`
