@@ -31,6 +31,29 @@
   <meta name="twitter:title" content="Bryan Cheong | Portfolio" />
   <meta name="twitter:description" content="Bryan Cheong's portfolio - blending data science with industry insight. From financial modelling and demand forecasting to creative side projects, explore end-to-end analytics work powered by Python, SQL, and R." />
   <meta name="twitter:image" content="https://bryancheong.dev/landscape_icon.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bryan Cheong",
+    "url": "https://bryancheong.dev",
+    "jobTitle": "Data Analyst",
+    "description": "Portfolio of Bryan Cheong - blending data science with industry insight. From financial modelling and demand forecasting to creative side projects, explore end-to-end analytics work powered by Python, SQL, and R.",
+    "image": "https://bryancheong.dev/landscape_icon.png",
+    "sameAs": [],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://bryancheong.dev"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Bryan Cheong"
+    },
+    "datePublished": "2025-05-01",
+    "dateModified": "2025-05-21"
+  }
+  </script>
 </svelte:head>
 
 <Header y={y} />
