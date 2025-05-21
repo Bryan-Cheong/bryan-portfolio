@@ -15,8 +15,22 @@
 </script>
 
 <svelte:head>
+  <!-- Browser Tab Title -->
+  <title>Bryan Cheong | Portfolio</title>
+  <meta name="description" content="Bryan Cheong's portfolio - blending data science with industry insight. From financial modelling and demand forecasting to creative side projects, explore end-to-end analytics work powered by Python, SQL, and R." />
+
+  <!-- Open Graph (LinkedIn, Facebook) -->
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="Bryan Cheong | Portfolio" />
-  <meta property="og:image" content="https://bryancheong.dev/icon.jpeg" />
+  <meta property="og:description" content="Bryan Cheong's portfolio - blending data science with industry insight. From financial modelling and demand forecasting to creative side projects, explore end-to-end analytics work powered by Python, SQL, and R." />
+  <meta property="og:image" content="https://bryancheong.dev/landscape_icon.png" />
+  <meta property="og:url" content="https://bryancheong.dev" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bryan Cheong | Portfolio" />
+  <meta name="twitter:description" content="Bryan Cheong's portfolio - blending data science with industry insight. From financial modelling and demand forecasting to creative side projects, explore end-to-end analytics work powered by Python, SQL, and R." />
+  <meta name="twitter:image" content="https://bryancheong.dev/landscape_icon.png" />
 </svelte:head>
 
 <Header y={y} />
