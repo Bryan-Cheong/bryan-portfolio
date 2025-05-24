@@ -7,7 +7,8 @@
     rel = undefined,
     icon = undefined,  // Font Awesome icon class
     fullWidth = false,
-    children
+    children,
+    class: className = ""
   } = $props();
 
   $effect(() => {
@@ -34,6 +35,7 @@
     transform transition hover:scale-105 active:scale-95
     ${fullWidth ? 'w-full' : ''}
     flex items-center justify-center
+    ${className}
   `;
 </script>
 
@@ -60,8 +62,7 @@
     {href}
     {target}
     {rel}
-    class={buttonClasses}
-    ...@restProps
+    class = {buttonClasses}
   >
     <div class={`btn-bg-animate ${variantStyles[variant].bg}`}></div>
     <div class="relative z-[1] flex items-center gap-2">
@@ -75,7 +76,6 @@
   <button 
     {type}
     class={buttonClasses}
-    ...@restProps
   >
     <div class={`btn-bg-animate ${variantStyles[variant].bg}`}></div>
     <div class="relative z-[1] flex items-center gap-2">
