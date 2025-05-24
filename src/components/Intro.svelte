@@ -47,6 +47,7 @@
         target="_blank"
         variant="secondary"
         icon="fa-solid fa-download text-sm"
+        class="vwo-cv-cta"
       >
         Download CV
       </Button>
