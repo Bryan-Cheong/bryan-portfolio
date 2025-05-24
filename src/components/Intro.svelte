@@ -36,7 +36,7 @@
     <div class={`flex flex-wrap gap-[clamp(0.75rem,2vw,1rem)] justify-start mt-[clamp(0.5rem,1vw,0.75rem)] intro-entrance intro-entrance-3 ${isPageLoaded ? 'loaded' : ''}`}>
       <Button 
         href="mailto:wei.cheong24@imperial.ac.uk"
-        variant="primary"
+        variant="secondary"
         icon="fa-regular fa-envelope text-sm"
       >
         Contact Me
@@ -45,7 +45,7 @@
       <Button 
         href="/assets/CV.pdf"
         target="_blank"
-        variant="secondary"
+        variant="primary"
         icon="fa-solid fa-download text-sm"
         class="vwo-cv-cta"
       >
