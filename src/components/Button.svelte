@@ -61,6 +61,7 @@
     {target}
     {rel}
     class={buttonClasses}
+    {...$$restProps}
   >
     <div class={`btn-bg-animate ${variantStyles[variant].bg}`}></div>
     <div class="relative z-[1] flex items-center gap-2">
@@ -74,6 +75,7 @@
   <button 
     {type}
     class={buttonClasses}
+    {...$$restProps}
   >
     <div class={`btn-bg-animate ${variantStyles[variant].bg}`}></div>
     <div class="relative z-[1] flex items-center gap-2">
