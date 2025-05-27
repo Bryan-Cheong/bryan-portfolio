@@ -23,14 +23,14 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Bryan Cheong | Portfolio" />
   <meta property="og:description" content="Bryan Cheong's portfolio - blending data science with industry insight. From financial modelling and demand forecasting to creative side projects, explore end-to-end analytics work powered by Python, SQL, and R." />
-  <meta property="og:image" content="https://bryancheong.dev/landscape_icon.png" />
+  <meta property="og:image" content="https://bryancheong.dev/preview.png" />
   <meta property="og:url" content="https://bryancheong.dev" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Bryan Cheong | Portfolio" />
   <meta name="twitter:description" content="Bryan Cheong's portfolio - blending data science with industry insight. From financial modelling and demand forecasting to creative side projects, explore end-to-end analytics work powered by Python, SQL, and R." />
-  <meta name="twitter:image" content="https://bryancheong.dev/landscape_icon.png" />
+  <meta name="twitter:image" content="https://bryancheong.dev/preview.png" />
 
   <script type="application/ld+json">
   {
@@ -40,7 +40,7 @@
     "url": "https://bryancheong.dev",
     "jobTitle": "Data Analyst",
     "description": "Portfolio of Bryan Cheong - blending data science with industry insight. From financial modelling and demand forecasting to creative side projects, explore end-to-end analytics work powered by Python, SQL, and R.",
-    "image": "https://bryancheong.dev/landscape_icon.png",
+    "image": "https://bryancheong.dev/preview.png",
     "sameAs": [],
     "mainEntityOfPage": {
       "@type": "WebPage",
