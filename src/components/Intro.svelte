@@ -43,7 +43,7 @@
       </Button>
       
       <Button 
-        href="/assets/CV_Bonus.pdf"
+        href="/assets/CV.pdf"
         target="_blank"
         variant="primary"
         icon="fa-solid fa-download text-sm"
