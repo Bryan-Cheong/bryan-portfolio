@@ -14,7 +14,7 @@
   const experienceItems = [
     {
       logo: '/assets/anavio.avif',
-      company: 'Anavio Capital Partners',
+      company: 'Anavio Capital Partners London',
       title: 'Equity Analytics Intern – Long/Short Strategy',
       dates: 'July 2023 → September 2023',
       responsibilities: ["Built an automated equity screening dashboard integrating 15+ capital efficiency metrics to support uncorrelated long/short strategies targeting idiosyncratic returns",
@@ -25,7 +25,7 @@
     },
     {
       logo: '/assets/gse.png',
-      company: 'GSE-M Technology Sdn. Bhd',
+      company: 'GSE-M Technology Malaysia',
       title: 'Enterprise Resource Planning (ERP) Assistant',
       dates: 'May 2023 → July 2023',
       responsibilities: [
@@ -36,7 +36,7 @@
     },
     {
       logo: 'assets/britishredcross.png',
-      company: 'British Red Cross',
+      company: 'British Red Cross London',
       title: 'Data Analyst',
       dates: 'September 2022 → April 2023',
       responsibilities: [
@@ -47,7 +47,7 @@
     },
     {
       logo: 'assets/subplace.png',
-      company: 'Subplace',
+      company: 'Subplace Malaysia',
       title: 'Software Reliability Intern',
       dates: 'June 2022 → August 2022',
       responsibilities: [
