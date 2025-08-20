@@ -74,14 +74,14 @@
   const projectItems = [
     {
       title: "Multi-Channel Attribution",
-      description: "Analysed 3.3M contacts and 240K orders to compare catalogue vs. email campaign effectiveness with PostgreSQL. Computed attribution models (first-, last-, linear-click), revealing catalogue's six times higher conversion. Segmented customers into 125 RFM cells, estimated CLV, and recommended targeting strategies based on breakeven cost and ROI",
+      description: "Analysed 3.3M contacts and 240K orders to compare catalogue vs. email campaign effectiveness with PostgreSQL. Computed attribution models (first-, last-, linear-click), revealing catalogue's six times higher conversion. Segmented customers into 125 RFM cells, estimated CLV, and recommended targeting strategies based on breakeven cost and ROI.",
       tools: ["PostgreSQL", "Multi-Channel Attribution Modelling", "ROI and Breakeven Cost Analysis", "RFM Segmentation", "CLV Estimation"],
       image: "/assets/projects/attribution.png",
       pdf: "/assets/projects/attribution.zip",
     },
     {
       title: "Portfolio A/B Testing & Analytics.",
-      description: "Ran A/B tests with VWO to measure impact of clickbait vs professional phrasing on my portfolio website's “Download CV” CTA; the professional version saw a statistically significant 70.3% higher CTR. Drove traffic via social media, Selenium bots, and a targeted Google Ads campaign; tracked conversions and bounce rate using event-based analytics",
+      description: "Ran A/B tests with VWO to measure impact of clickbait vs professional phrasing on my portfolio website's “Download CV” CTA; the professional version saw a statistically significant 70.3% higher CTR. Drove traffic via social media, Selenium bots, and a targeted Google Ads campaign; tracked conversions and bounce rate using event-based analytics.",
       tools: ["A/B Testing", "VWO", "Google Analytics", "Google Ads", "Selenium", "Two-sided z-test"],
       image: "/assets/projects/abtest.png",
       pdf: "/assets/projects/abtest.pdf",
@@ -103,29 +103,29 @@
     },
     {
       title: "Beat the Bookies",
-      description: "Engineered a Premier League match outcome predictor achieving 51% validation accuracy with CatBoost. Feature-engineered tuned Pi-rating variants, applied SHAP-based feature selection, and explored pre-game sentiment analysis using LLMs and the Nitter API.",
+      description: "Engineered a Premier League match predictor using 18 features across five seasons (older data degraded performance), achieving 51% validation and ~40% test accuracy with CatBoost. Feature-engineered Pi-rating variants with tuned hyperparameters and selected key variables using SHAP. Explored pre-game sentiment as a predictive signal using LLMs and Nitter API.",
       tools: ["Python", "Pandas", "CatBoost", "Random Forest", "SHAP", "Nitter API", "Pi-rating", "VADER"],
       image: "/assets/projects/bookies.png",
       pdf: "/assets/projects/bookies.pdf"
     },
     {
       title: "RIE Cleaning of Lagged Covariance Matrices",
-      description: "Designed a cleaning algorithm for lagged covariance matrices using Rotationally Invariant Estimators (RIEs), correcting singular value distortions via spectral projections guided by the Marchenko-Pastur law. The method achieved 100% noise reduction in AR(0) models and ~20% improvement in signal-to-noise ratio for AR(1), with greater gains as dimensionality increased. This improves the accuracy of high-dimensional covariance estimation for applications in portfolio risk modelling, signal processing, and time series forecasting.",
+      description: "Developed a spectral cleaning algorithm using Rotationally Invariant Estimators, shrinking noise in high-dimensional lagged covariance matrices. Achieved 100% noise reduction in AR(0) and ~20% signal-to-noise improvement in AR(1), with more gains as dimensionality increased. Applicable to portfolio risk modelling, time series forecasting, and signal processing.",
       tools: ["Python", "NumPy", "Pandas", "Matplotlib", "SciPy", "scikit-learn", "Statsmodels", "Marchenko-Pastur law", "SVD", "Rotationally Invariant Estimators", ],
       image: "/assets/projects/rie.png",
       pdf: "assets/projects/rie.pdf",
       github: "https://github.com/Bryan-Cheong/RIE-Singular-Value-Cleaning-of-Lagged-Covariance-Matrices"
     },
     {
-      title: "Logistics and Supply Chain Optimisation Game",
-      description: "Simulated a multi-region supply chain using hybrid demand forecasting and cost-benefit analysis to guide factory and warehouse expansion. Applied adjusted reorder points and Silver-Meal heuristics to manage seasonal inventory, securing 2nd place in Imperial's cohort.",
+      title: "Logistics and Supply Chain Optimisation",
+      description: "Simulated a multi-region supply chain implementing hybrid demand forecasting (SARIMA, Croston's method) and cost-benefit analysis to guide factory and warehouse expansion. Applied adjusted reorder points and Silver-Meal heuristics to manage seasonal inventory, securing 2nd place in Imperial's cohort.",
       tools: ["Python", "R", "Excel", "SARIMA", "Croston's method", "Silver-Meal heuristic", "Linear regression"],
       image: "/assets/projects/logistics.png",
       pdf: "/assets/projects/logistics.pdf"
     },
     {
-      title: "Energy Demand Forecasting Model",
-      description: "Forecasted UK electricity demand by engineering lagged, Heating Degree Days (HDDs), and calendar features; progressed from linear models to XGBoost. Achieved 96.3% R² with strong generalisation and low residual autocorrelation.",
+      title: "Energy Demand Forecasting",
+      description: "Developed and tuned XGBoost model to forecast UK electricity demand, engineering features like Heating Degree Days, holiday dummies, and temporal lags. Achieved 96.3% R²; generalises well with low residual autocorrelation.",
       tools: ["Python", "Pandas", "NumPy", "Statsmodels", "XGBoost", "Random Forest", "Ridge Regression", "workalendar"],
       image: "/assets/projects/energy_forecasting.png",
       pdf: "/assets/projects/energy_forecasting.pdf"
