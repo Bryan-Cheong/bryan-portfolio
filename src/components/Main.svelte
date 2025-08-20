@@ -13,65 +13,93 @@
   
   const experienceItems = [
     {
+      logo: '/assets/tecno.png',
+      company: 'Tecno International (Capstone Project) - London',
+      title: 'LLM Agent Engineer',
+      dates: 'June 2025 → August 2025',
+      responsibilities: [
+        "Designed multi-agent pipeline (Self-Assessment, Research, Strategy) using GPT-4.1 to automate SME ESG consulting",
+        "Prototyped Weaviate RAG with hybrid BM25 + embeddings + Reciprocal Rank Fusion to retrieve and contextualise ESG insights",
+        "Auto-generated ESG reports and enabled live in-chat edits, cutting analysis time 75% and freeing consultants for higher-order work",
+        "Optimised token usage via context compression and caching, reducing API costs by 20% without quality loss",
+        "Developed PDF ingestion pipeline using PyMuPDF + LLM extraction to auto-populate client profiles, cutting onboarding by 70%"
+      ]
+    },
+    {
       logo: '/assets/anavio.avif',
-      company: 'Anavio Capital Partners – London',
-      title: 'Equity Analytics Intern – Long/Short Strategy',
+      company: 'Anavio Capital Partners - London',
+      title: 'Equity Analytics Intern - Long/Short Strategy',
       dates: 'July 2023 → September 2023',
-      responsibilities: ["Built an automated equity screening dashboard integrating 15+ capital efficiency metrics to support uncorrelated long/short strategies targeting idiosyncratic returns",
-      "Scaled daily coverage from 10 to 200 tickers, reducing manual workload by 80% through automated data ingestion, computation, and reporting",
-      "Enhanced pipeline robustness with 100+ Pytest tests and six error-handling decorators, significantly reducing downtime and debugging time",
-      "Streamlined communication with management by translating complex logic into clear flowcharts and wireframes, accelerating alignment and halving delivery time"
+      responsibilities: [
+        "Built a Python dashboard to uncover patterns in firm-level efficiency across 15+ metrics, identifying outliers for investment decisions",
+        "Scaled coverage from 10 to 200 tickers and automated 80% of manual analysis, accelerating idea generation for the portfolio manager",
+        "Enhanced pipeline robustness with 100+ Pytest tests and six error-handling decorators, minimising production risk and downtime",
+        "Translated business rules into flowcharts to clarify logic and align tool design with non-technical stakeholders, halving delivery time"
       ]
     },
     {
       logo: '/assets/gse.png',
-      company: 'GSE-M Technology – Malaysia',
+      company: 'GSE-M Technology - Malaysia',
       title: 'Enterprise Resource Planning (ERP) Assistant',
       dates: 'May 2023 → July 2023',
       responsibilities: [
-        "Collaborated with cross-functional ERP users across five departments to gather 30+ requirements, understand operational challenges, and locate critical bugs",
-        "Tailored the ERP with consultants to enhance efficiency by 25% and meet departmental needs",
-        "Co-led daily conference room pilots, training 90 employees on the ERP system to ensure smooth system adoption"
+        "Partnered with five departments to gather 30+ requirements, resolve critical bugs, and address operational pain points",
+        "Streamlined ERP with consultants and co-led training for 90 staff, improving process efficiency by 25%"
       ]
     },
     {
       logo: 'assets/britishredcross.png',
-      company: 'British Red Cross – London',
+      company: 'British Red Cross - London',
       title: 'Data Analyst',
       dates: 'September 2022 → April 2023',
       responsibilities: [
-        "Developed a Power BI app with 20+ interactive dashboards to analyse complaints data, providing actionable insights for support teams and key stakeholder reports. Enhanced decision-making and reduced complaint resolution time by 50%",
-        "Built an ETL pipeline in Power BI Dataflows to extract data from four sources, normalised it into fact and dimension tables, and leveraged DAX for advanced reporting features like geographical drill-downs and slicing, enabling consistent and scalable reporting",
+        "Developed 20+ Power BI dashboards to visualise behavioural trends in complaints across the UK for operational and senior teams",
+        "Defined resolution KPIs and identified delay drivers, reducing resolution time by 50% and improving service outcomes for customers",
+        "Built an ETL pipeline from four sources and used DAX for geographical drill-downs, enabling scalable and customised reporting",
         "Secured future development by presenting a streamlined issue resolution system along with a deployment manual to the Head of Data"
       ]
     },
     {
       logo: 'assets/subplace.png',
-      company: 'Subplace – Malaysia',
+      company: 'Subplace - Malaysia',
       title: 'Software Reliability Intern',
       dates: 'June 2022 → August 2022',
       responsibilities: [
-        "Improved maintenance efficiency by 60% by enhancing test coverage with systematic test cases and modular templates",
-        "Collaborated with software engineers to resolve over 200 issues raised from thorough testing",
-        "Advocated for best practices in software development and testing like agile methodologies and test-driven development"
+        "Cut maintenance time by 60% via modular and systematic test case templates, improving stability for a SQL-backed platform",
+        "Resolved 200+ issues and introduced agile, test-driven development practices to enhance reliability and support continuous delivery"
       ]
     }
   ];
 
   const projectItems = [
     {
+      title: "Multi-Channel Attribution",
+      description: "Analysed 3.3M contacts and 240K orders to compare catalogue vs. email campaign effectiveness with PostgreSQL. Computed attribution models (first-, last-, linear-click), revealing catalogue's six times higher conversion. Segmented customers into 125 RFM cells, estimated CLV, and recommended targeting strategies based on breakeven cost and ROI",
+      tools: ["PostgreSQL", "Multi-Channel Attribution Modelling", "ROI and Breakeven Cost Analysis", "RFM Segmentation", "CLV Estimation"],
+      image: "/assets/projects/attribution.png",
+      pdf: "/assets/projects/attribution.zip",
+    },
+    {
+      title: "Portfolio A/B Testing & Analytics.",
+      description: "Ran A/B tests with VWO to measure impact of clickbait vs professional phrasing on my portfolio website's “Download CV” CTA; the professional version saw a statistically significant 70.3% higher CTR. Drove traffic via social media, Selenium bots, and a targeted Google Ads campaign; tracked conversions and bounce rate using event-based analytics",
+      tools: ["A/B Testing", "VWO", "Google Analytics", "Google Ads", "Selenium", "Two-sided z-test"],
+      image: "/assets/projects/abtest.png",
+      pdf: "/assets/projects/abtest.pdf",
+      website: "/"
+    },
+    {
       title: "Text Analytics Project on Song Lyrics",
-      description: "Applied NLP and ML to analyse 40,000+ song lyrics, uncovering genre trends in sentiment, explicit content, and topics. Used LASSO with uni+bigrams and FastText word embeddings to predict popularity and evaluate genre transferability.",
+      description: "Modelled 40,000+ lyrics through LASSO regression with n-grams and FastText embeddings to explore song popularity drivers. Discovered eight genre-level trends in explicitness and thematic content. Leveraged PCA-filtering and cosine similarity on word vectors to quantify semantic shifts between artists' first albums and subsequent works.",
       tools: ["R", "tidyverse", "quanteda", "textclean", "glmnet", "FastText word embeddings", "sentimentr", "stm",],
       image: "/assets/projects/song.png",
       pdf: "/assets/projects/song.pdf"
     },
     {
-      title: "Logistics and Supply Chain Optimisation Game",
-      description: "Simulated a multi-region supply chain using hybrid demand forecasting and cost-benefit analysis to guide factory and warehouse expansion. Applied adjusted reorder points and Silver-Meal heuristics to manage seasonal inventory, securing 2nd place in Imperial's cohort.",
-      tools: ["Python", "R", "Excel", "SARIMA", "Croston's method", "Silver-Meal heuristic", "Linear regression"],
-      image: "/assets/projects/logistics.png",
-      pdf: "/assets/projects/logistics.pdf"
+      title: "RecSys Purchase Prediction",
+      description: "Built a two-stage pipeline on 33M clicks and 1.1M purchases to predict purchasing sessions with XGBoost and forecast items bought via heuristic ranking. Engineered 21 features with temporal encodings and rarity filters. Tuned thresholds to optimise a Jaccard-based score and used SHAP to interpret key drivers like session duration and item popularity.",
+      tools: ["Python", "Pandas", "XGBoost", "SHAP", "PostgreSQL", "Feature Engineering", "Heuristic Ranking"],
+      image: "/assets/projects/recsys.png",
+      pdf: "/assets/projects/recsys.pdf"
     },
     {
       title: "Beat the Bookies",
@@ -89,6 +117,13 @@
       github: "https://github.com/Bryan-Cheong/RIE-Singular-Value-Cleaning-of-Lagged-Covariance-Matrices"
     },
     {
+      title: "Logistics and Supply Chain Optimisation Game",
+      description: "Simulated a multi-region supply chain using hybrid demand forecasting and cost-benefit analysis to guide factory and warehouse expansion. Applied adjusted reorder points and Silver-Meal heuristics to manage seasonal inventory, securing 2nd place in Imperial's cohort.",
+      tools: ["Python", "R", "Excel", "SARIMA", "Croston's method", "Silver-Meal heuristic", "Linear regression"],
+      image: "/assets/projects/logistics.png",
+      pdf: "/assets/projects/logistics.pdf"
+    },
+    {
       title: "Energy Demand Forecasting Model",
       description: "Forecasted UK electricity demand by engineering lagged, Heating Degree Days (HDDs), and calendar features; progressed from linear models to XGBoost. Achieved 96.3% R² with strong generalisation and low residual autocorrelation.",
       tools: ["Python", "Pandas", "NumPy", "Statsmodels", "XGBoost", "Random Forest", "Ridge Regression", "workalendar"],
@@ -101,31 +136,13 @@
     //   tools: ["Python"],
     //   image: "/assets/projects/robotic.png"
     // },
+
     {
       title: "SvelteKit and TailwindCSS Portfolio",
       description: "Developed a responsive portfolio with SvelteKit and TailwindCSS featuring a comprehensive design system using CSS variables for consistent styling. Implemented accessible components with ARIA attributes, smooth Svelte transitions, SEO optimisation, and Google Analytics integration while ensuring performance through Svelte's compiler design.",
       tools: ["SvelteKit", "TailwindCSS", "JavaScript", "HTML", "CSS", "Vercel", "Google Analytics", "SEO"],
       website: "/"
-    },
-    // {
-    //   title: "A/B Testing Analysis",
-    //   description: "Conducted A/B testing for a marketing campaign, resulting in a 15% increase in conversion rates.",
-    //   tools: ["Python", "R", "SQL"],
-    //   image: "/assets/projects/abtesting.png"
-    // },
-    // {
-    //   title: "Tetris AI",
-    //   description: "Implemented a Tetris heuristics evaluation AI, scored 28,000+ points using 400 blocks, 80th percentile in UCL's cohort",
-    //   tools: ["Python", "NumPy", "Pygame"],
-    //   image: "/assets/projects/tetris.png"
-    // },
-    // {
-    //   title: "Titanic Exploratory Data Analysis",
-    //   description: "Conducted exploratory data analysis on Titanic dataset, visualizing survival rates and passenger demographics.",
-    //   tools: ["R", "ggplot2", "dplyr", "tidyverse"],
-    //   image: "/assets/projects/titanic.png",
-    //   pdf: "/assets/projects/titanic.pdf"
-    // },
+    }
   ];
 
   const educationItems = [
