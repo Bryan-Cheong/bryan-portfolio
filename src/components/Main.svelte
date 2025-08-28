@@ -27,7 +27,7 @@
     },
     {
       logo: '/assets/anavio.avif',
-      company: 'Anavio Capital Partners - London',
+      company: 'Anavio Capital Partners LLP - London',
       title: 'Equity Analytics Intern - Long/Short Strategy',
       dates: 'July 2023 → September 2023',
       responsibilities: [
@@ -149,7 +149,7 @@
     {
       logo: '/assets/imperial.png',
       institution: 'Imperial College London',
-      degree: 'MSc in Business Analytics',
+      degree: 'MSc in Business Analytics (Distinction, 78%)',
       dates: '2024 → 2025',
       courses: [
         "Generative AI and Large Language Models",
@@ -170,7 +170,7 @@
     {
       logo: '/assets/ucl.png',
       institution: 'University College London',
-      degree: 'BSc in Computer Science',
+      degree: 'BSc in Computer Science (Upper Second-Class Honours, 68%)',
       dates: '2021 → 2024',
       courses: [
         "Data Structures and Algorithms",
