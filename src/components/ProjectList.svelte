@@ -3,8 +3,9 @@
 </script>
 
 <div class="flex flex-col gap-12">
-  {#each items as project}
+  {#each items as project, index}
     <div
+      id="project-{index}"
       class="bg-white rounded-lg shadow-sm border border-[var(--color-border-light)] overflow-hidden flex flex-col group hover:shadow-md hover:scale-102 transition duration-300"
     >
       <!-- Content (left) -->
