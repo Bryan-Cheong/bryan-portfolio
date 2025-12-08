@@ -195,6 +195,6 @@
     >
       <i class="fa-solid fa-chevron-down text-lg"></i>
     </button>
-    <span class="text-xs text-[var(--color-text-muted)] opacity-40">Press space to learn more</span>
+    <span class="text-xs text-[var(--color-text-muted)] opacity-40">Press  or click on the arrow to learn more</span>
   </div>
 </section>
